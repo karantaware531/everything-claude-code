@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "probed_at": "2026-04-20T09:25:02Z",
+  "ttl_seconds": 300,
+  "tools": {
+    "agent_validator": {
+      "path": ".claude/tools/agent_validator.py",
+      "exists": true,
+      "network": false,
+      "safety": "safe"
+    },
+    "code_executor": {
+      "path": ".claude/tools/code_executor.py",
+      "exists": true,
+      "network": false,
+      "safety": "guarded"
+    },
+    "wiki_compiler": {
+      "path": ".claude/tools/wiki_compiler.py",
+      "exists": true,
+      "network": false,
+      "safety": "safe"
+    },
+    "repo_ingestor": {
+      "path": ".claude/tools/repo_ingestor.py",
+      "exists": true,
+      "network": true,
+      "safety": "guarded"
+    },
+    "policy_guard": {
+      "path": ".claude/tools/policy_guard.py",
+      "exists": true,
+      "network": false,
+      "safety": "safe"
+    }
+  },
+  "shell_dependencies": {
+    "git": true,
+    "python": true,
+    "python3": true
+  },
+  "recent_failures": {},
+  "wall_clock": "2026-04-20T09:25:02Z"
+}

@@ -1,0 +1,27 @@
+{
+  "version": "2.0",
+  "description": "User persona configuration for Agentic OS. Tells Claude about communication style preferences.",
+  "technicalLevel": "expert",
+  "preferredStyle": {
+    "verbosity": "minimal",
+    "codeComments": true,
+    "explanations": "on-request",
+    "errorDetail": "full",
+    "outputFormat": "structured"
+  },
+  "domains": ["python", "ai-agents", "claude-code", "systems-architecture"],
+  "codePreferences": {
+    "typeHints": true,
+    "docstrings": "public-api-only",
+    "testStyle": "pytest",
+    "importStyle": "explicit"
+  },
+  "agentPreferences": {
+    "defaultTier": "notify",
+    "preferOrchestrator": true,
+    "autoReflect": true,
+    "epochWindow": 20
+  },
+  "suggestedBy": "agentic-os-ecc-integration",
+  "createdAt": "2026-04-22T00:00:00.000Z"
+}

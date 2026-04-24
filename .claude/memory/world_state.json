@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updated_at": "2026-04-20T09:25:00Z",
+  "states": {
+    "idle": {
+      "description": "idle",
+      "observed_count": 1,
+      "first_seen": "2026-04-20T09:25:00Z"
+    },
+    "compiled": {
+      "description": "compiled",
+      "observed_count": 1,
+      "first_seen": "2026-04-20T09:25:00Z"
+    }
+  },
+  "transitions": [
+    {
+      "from": "idle",
+      "action": "compile",
+      "to": "compiled",
+      "n": 1,
+      "confidence": 0.1,
+      "first_seen": "2026-04-20T09:25:00Z",
+      "last_seen": "2026-04-20T09:25:00Z"
+    }
+  ]
+}

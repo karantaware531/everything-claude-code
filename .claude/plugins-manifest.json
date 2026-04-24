@@ -1,0 +1,136 @@
+{
+  "$schema_note": "Agentic OS plugin manifest v1 (2026-04-24). Lists plugins this repo expects/uses. Install by reference (not copy) per v5.3 Council decision. Run `py -3 .claude/tools/install_plugins.py` to install all 'core' plugins; append `--all` for core+optional.",
+  "version": 1,
+  "marketplaces": {
+    "claude-plugins-official": {
+      "repo": "anthropics/claude-plugins-official",
+      "install_command_template": "/plugin install {plugin}@claude-plugins-official",
+      "note": "Anthropic-maintained official plugins. Each carries its own LICENSE upstream."
+    },
+    "voltagent-subagents": {
+      "repo": "voltagent/voltagent-subagents",
+      "install_command_template": "/plugin install {plugin}@voltagent-subagents",
+      "note": "92 domain specialists we route to via SPECIALISTS.md."
+    }
+  },
+  "plugins": {
+    "core": {
+      "$comment": "Plugins this repo actively relies on. Expected to be installed on every machine running this project.",
+      "commit-commands@claude-plugins-official": {
+        "why": "We ship /commit, /commit-push-pr, /clean_gone commands derived from this plugin. Install the source for updates + parity."
+      },
+      "security-guidance@claude-plugins-official": {
+        "why": "Source of security_reminder_hook.py (we use a Windows-portable + Agentic-OS-aware copy in .claude/hooks/). Install for upstream pattern updates."
+      },
+      "claude-md-management@claude-plugins-official": {
+        "why": "Long-term constitution maintenance (claude-md-improver skill). Referenced by our onboarding."
+      },
+      "voltagent-lang@voltagent-subagents": {
+        "why": "30 language specialists (python-pro, typescript-pro, rust-engineer, golang-pro, etc.). Routed to per SPECIALISTS.md."
+      },
+      "voltagent-dev-exp@voltagent-subagents": {
+        "why": "15 dev-experience specialists (refactoring, legacy-modernizer, mcp-developer, documentation-engineer, etc.)."
+      },
+      "voltagent-qa-sec@voltagent-subagents": {
+        "why": "16 QA + security specialists (security-auditor, penetration-tester, performance-engineer, test-automator, etc.). Heavy use in Council loops."
+      },
+      "voltagent-research@voltagent-subagents": {
+        "why": "9 research specialists (research-analyst, competitive-analyst, scientific-literature-researcher, etc.)."
+      },
+      "voltagent-data-ai@voltagent-subagents": {
+        "why": "14 data + ML specialists (ai-engineer, llm-architect, postgres-pro, database-optimizer, etc.)."
+      },
+      "superpowers@claude-plugins-official": {
+        "why": "Substantive skills: using-superpowers, brainstorming, writing-plans, systematic-debugging, test-driven-development, verification-before-completion, subagent-driven-development, requesting/receiving-code-review, dispatching-parallel-agents, finishing-a-development-branch. Core discipline patterns that complement our Council flow. Note: the plugin's legacy slash commands (/brainstorm, /write-plan, /execute-plan) are upstream-deprecated shims — ignore those; use the SKILLS."
+      }
+    },
+    "optional": {
+      "$comment": "Useful in specific contexts. Install on demand.",
+      "feature-dev@claude-plugins-official": {
+        "why": "3 agents (code-architect, code-explorer, code-reviewer) for structured feature workflow.",
+        "when": "Starting a greenfield feature and want a blueprint-first approach."
+      },
+      "skill-creator@claude-plugins-official": {
+        "why": "Help building / refining custom skills.",
+        "when": "Authoring new .claude/skills/ entries."
+      },
+      "mcp-server-dev@claude-plugins-official": {
+        "why": "Help building MCP servers.",
+        "when": "Extending the project with new MCP integrations."
+      },
+      "code-review@claude-plugins-official": {
+        "why": "Standalone code-review workflow (complements our /review + Consensus Council).",
+        "when": "Want an extra independent review pass."
+      },
+      "hookify@claude-plugins-official": {
+        "why": "Help building Claude Code hooks.",
+        "when": "Designing new hooks."
+      },
+      "plugin-dev@claude-plugins-official": {
+        "why": "Help building Claude Code plugins.",
+        "when": "Creating your own plugin."
+      },
+      "agent-sdk-dev@claude-plugins-official": {
+        "why": "Help building with Claude Agent SDK.",
+        "when": "Building programmatic agents outside this repo's subagent system."
+      },
+      "session-report@claude-plugins-official": {
+        "why": "Structured end-of-session reports (complements /save-session + session_end_summary hook).",
+        "when": "Heavy long-session work where reports add value."
+      },
+      "ralph-loop@claude-plugins-official": {
+        "why": "Autonomous-loop scaffolding (one of the continuous-loop patterns).",
+        "when": "Running unattended autonomous coding loops."
+      },
+      "pr-review-toolkit@claude-plugins-official": {
+        "why": "Focused PR-review workflow.",
+        "when": "Regular PR-review cadence on a team."
+      }
+    },
+    "language-lsps": {
+      "$comment": "Language Server Protocol integrations. Install ONLY the ones matching your project's languages.",
+      "pyright-lsp@claude-plugins-official":       {"language": "Python"},
+      "typescript-lsp@claude-plugins-official":    {"language": "TypeScript / JavaScript"},
+      "gopls-lsp@claude-plugins-official":         {"language": "Go"},
+      "rust-analyzer-lsp@claude-plugins-official": {"language": "Rust"},
+      "jdtls-lsp@claude-plugins-official":         {"language": "Java"},
+      "kotlin-lsp@claude-plugins-official":        {"language": "Kotlin"},
+      "swift-lsp@claude-plugins-official":         {"language": "Swift"},
+      "clangd-lsp@claude-plugins-official":        {"language": "C / C++ / Objective-C"},
+      "csharp-lsp@claude-plugins-official":        {"language": "C#"},
+      "ruby-lsp@claude-plugins-official":          {"language": "Ruby"},
+      "php-lsp@claude-plugins-official":           {"language": "PHP"},
+      "lua-lsp@claude-plugins-official":           {"language": "Lua"}
+    },
+    "styles": {
+      "$comment": "Output-style plugins. Install at most one; they modify Claude's response format.",
+      "explanatory-output-style@claude-plugins-official": {
+        "why": "Verbose explanatory mode — useful for teaching/onboarding sessions."
+      },
+      "learning-output-style@claude-plugins-official": {
+        "why": "Structured learning mode — useful when using Claude to study a new topic."
+      }
+    },
+    "skip": {
+      "$comment": "Plugins we do NOT recommend + why.",
+      "example-plugin@claude-plugins-official": {
+        "why_skip": "Example / template. Not functional."
+      },
+      "playground@claude-plugins-official": {
+        "why_skip": "Experimental / sandbox; not for production."
+      },
+      "math-olympiad@claude-plugins-official": {
+        "why_skip": "Math-competition specific. Install only if doing math work."
+      },
+      "frontend-design@claude-plugins-official": {
+        "why_skip": "Covered by design:* skills (already auto-loaded)."
+      },
+      "code-simplifier@claude-plugins-official": {
+        "why_skip": "Covered by voltagent-dev-exp:refactoring-specialist (broader + already in specialist pool)."
+      },
+      "claude-code-setup@claude-plugins-official": {
+        "why_skip": "Initial Claude Code install. Not relevant after first setup."
+      }
+    }
+  }
+}

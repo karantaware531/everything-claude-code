@@ -1,0 +1,40 @@
+{
+  "$schema_hint": "MCP server configuration for Claude Code. Provides live data access for the Agentic OS. See AGENTS.md for what each server provides.",
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github@2025.4.8"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp@2.1.4"]
+    },
+    "exa": {
+      "command": "npx",
+      "args": ["-y", "exa-mcp-server"],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      }
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory@2026.1.26"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@0.0.69", "--extension"]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sequential-thinking@2025.12.18"]
+    },
+    "graphify": {
+      "$comment": "v5.2 unified knowledge graph — exposes query_graph, get_node, get_neighbors, get_community, god_nodes, graph_stats, shortest_path as MCP tools. Live-queries graphify-out/graph.json built from .claude/notes/ + repo.",
+      "command": "py",
+      "args": ["-3", "-m", "graphify.serve", "graphify-out/graph.json"]
+    }
+  }
+}

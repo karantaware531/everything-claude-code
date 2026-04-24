@@ -1,0 +1,62 @@
+# .claude/policies/domain_policies.yaml
+#
+# Per-task-type adjustments applied by meta_controller AFTER its base tier
+# computation. The final tier is:
+#
+#   max(base_tier, min_tier, base_tier + any_applicable_bumps)
+#
+# Never lowers tier \u2014 only raises. Base tier is computed from aggregate
+# uncertainty + risk + recent failure rate (see core/autonomy_controller.py).
+#
+# task_type is derived from the orchestrator's routing decision or matched
+# against workflow templates under `.claude/workflows/*.json`.
+
+version: 1
+
+domain_policies:
+  # Generic code modification.
+  codegen:
+    min_tier: 1
+    tier_bumps:
+      uncertainty_high:      1   # +1 if aggregate_uncertainty class == high
+      uncertainty_critical:  2   # +2 if critical
+    notes: "codegen is common; autonomous by default unless uncertainty spikes."
+
+  # Bug-fixing work.
+  debug:
+    min_tier: 2                  # debugging surfaces decisions even when confident
+    tier_bumps:
+      uncertainty_high:      1
+    notes: "debug tasks touch existing code; always notify at minimum."
+
+  # Retrieval / research / wiki population.
+  rag:
+    min_tier: 1
+    tier_bumps: {}
+    notes: "read-mostly; stays autonomous unless grounding is poor."
+
+  # Ingestion from external sources (GitHub, web).
+  ingest:
+    min_tier: 2
+    tier_bumps:
+      uncertainty_high:      1
+    notes: "ingestion touches wiki/raw and potentially untrusted content; notify."
+
+  # Anything touching security, credentials, access control.
+  security_sensitive:
+    min_tier: 3                  # never autonomous
+    tier_bumps:
+      uncertainty_high:      1
+    notes: "always approval-required; no autonomous security decisions."
+
+  # System-level modifications (proposed by architecture_optimizer).
+  architecture_modification:
+    min_tier: 4                  # always user-gated
+    tier_bumps: {}
+    notes: "matches governance.yaml.action_tiers.architecture.modify == 4."
+
+  # Default when no task_type matches.
+  default:
+    min_tier: 1
+    tier_bumps: {}
+    notes: "fall-through; base computation unchanged."

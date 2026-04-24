@@ -1,0 +1,59 @@
+{
+  "task_type": "debug",
+  "description": "Reproduce, isolate, and fix a reported bug with evidence-grounded steps.",
+  "task_id_template": "t-debug-{uuid}",
+  "goal": "Identify the root cause of the bug, produce a fix, and record the lesson.",
+  "nodes": [
+    {
+      "id": "n1",
+      "capability": "disambiguate user goal",
+      "input": {"user_task": "<from context>"},
+      "expected_output": "reasoning: json",
+      "assigned_agent": "reasoner",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n2",
+      "capability": "mine repository for information",
+      "input": {"question": "where does <error> originate?", "scope": "<auto>"},
+      "expected_output": "findings: list_of_structured_claims",
+      "assigned_agent": "research_agent",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n3",
+      "capability": "write source code",
+      "input": {"task": "patch the root cause identified in n2", "target_files": "<from n2>"},
+      "expected_output": "changed_files: list, test_results: string",
+      "assigned_agent": "code_agent",
+      "retries_allowed": 2
+    },
+    {
+      "id": "n4",
+      "capability": "check correctness of agent output",
+      "input": {"agent_output": "<from n3>", "expected_contract": "<n3 contract>"},
+      "expected_output": "verdict: json",
+      "assigned_agent": "evaluator",
+      "retries_allowed": 0
+    },
+    {
+      "id": "n5",
+      "capability": "distill lesson into wiki experience",
+      "input": {"task_id": "<runtime>", "trace": "<from traces.json>", "outcome": "<from n4>"},
+      "expected_output": "reflection_report: json",
+      "assigned_agent": "reflection",
+      "retries_allowed": 0
+    }
+  ],
+  "edges": [
+    ["n1", "n2"],
+    ["n2", "n3"],
+    ["n3", "n4"],
+    ["n4", "n5"]
+  ],
+  "seeded_from_strategy": null,
+  "notes": [
+    "Planner matches tasks like 'fix <error>', 'why does X fail?', '<error>: expected X got Y'.",
+    "If research_agent returns only gaps with no findings, orchestrator should consider repo_ingestor for external sources."
+  ]
+}

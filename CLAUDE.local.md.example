@@ -1,0 +1,19 @@
+# CLAUDE.local.md (TEMPLATE — copy to CLAUDE.local.md for personal use)
+
+> Copy this file to `CLAUDE.local.md` (at repo root) and customize.
+> `CLAUDE.local.md` is gitignored; use it for personal project-specific instructions
+> that should NOT be committed (preferred editor, local paths, reminders).
+
+## Personal preferences
+
+<!-- e.g. "Use Bun, not npm, for all JS tooling locally." -->
+<!-- e.g. "Current sprint focus: auth refactor in src/auth/." -->
+
+## Local environment
+
+<!-- Paths specific to this machine -->
+<!-- e.g. "Docker Desktop is at D:\Tools\Docker" -->
+
+## Private notes
+
+<!-- Anything you want Claude to remember about this project that is NOT for the team -->

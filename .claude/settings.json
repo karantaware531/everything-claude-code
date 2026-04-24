@@ -1,0 +1,201 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(python .claude/tools/test_runner.py)",
+      "Bash(python .claude/tools/harness_audit.py)",
+      "Bash(python .claude/tools/harness_audit.py --json)",
+      "Bash(python .claude/tools/agent_validator.py --self-test)",
+      "Bash(py -3 -m graphify *)",
+      "Bash(py -3 -m graphify.serve *)",
+      "Bash(py -3 .claude/tools/agent_validator.py --self-test)",
+      "Bash(py -3 .claude/tools/test_runner.py)",
+      "Bash(py -3 .claude/tools/harness_audit.py)",
+      "Bash(py -3 .claude/tools/harness_audit.py --json)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(ls *)",
+      "Bash(pwd)",
+      "Bash(cat .claude/wiki/registry.json)",
+      "Bash(cat .claude/registry.json)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git reset --hard *)",
+      "Bash(mkfs *)",
+      "Bash(dd if=/dev/zero *)",
+      "Bash(chmod 777 *)",
+      "Bash(curl *| sh)",
+      "Bash(wget *| sh)"
+    ],
+    "defaultMode": "acceptEdits",
+    "$comment_allow": "Pre-approved commands (skip the permission prompt). Keep this list narrow.",
+    "$comment_deny": "Hard blocks in addition to security.yaml hook enforcement."
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_health_probe.py\"",
+            "timeout": 20
+          }
+        ]
+      },
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_compact_reinject.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce_policy_on_bash.py\"",
+            "timeout": 15
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/enforce_policy_on_write.py\"",
+            "timeout": 15
+          },
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/gateguard.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/security_reminder_hook.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/karpathy_invariant_check.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/precompact_state_saver.py\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/post_compact_reinject.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/notification.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "ConfigChange": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/config_change_audit.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/subagent_lifecycle.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/subagent_lifecycle.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/suggest_epoch_learner.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"$CLAUDE_PROJECT_DIR/.claude/hooks/session_end_summary.py\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {},
+  "autoMemoryEnabled": true,
+  "$schema_hint": "Claude Code settings (v5.4). https://code.claude.com/docs/en/claude-directory — checked into git; personal overrides belong in settings.local.json. Disable all Agentic OS hooks with AGENTIC_OS_HOOKS_DISABLED=1.",
+  "$v5_5_note": "v5.5: defaultMode=acceptEdits (Council + 6 safety layers + hook stack provide safety net). CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1 enables Lead Agent pattern via main session.",
+  "$comment_autoMemory": "Claude writes cross-session learnings to ~/.claude/projects/<hash>/memory/MEMORY.md. Read at session start. Complements .claude/notes/self/ (written by epoch_learner)."
+}

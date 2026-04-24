@@ -1,0 +1,18 @@
+# Files to copy into new git worktrees created by Claude Code.
+# Gitignored files that are nonetheless required for the project to function locally.
+# Claude Code reads this at .worktreeinclude in the repo root.
+
+# Personal Claude settings (per-user)
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Environment configs (if your project uses .env — uncomment as needed)
+# .env
+# .env.local
+# .env.development
+
+# Python venv pointer (if your project uses a specific venv path)
+# .venv/pyvenv.cfg
+
+# Node version manager config
+# .nvmrc

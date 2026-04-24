@@ -1,0 +1,124 @@
+# .claude/policies/security.yaml
+#
+# Declarative governance for Agentic OS v2.
+# Read by policy_guard.py; consulted by agents and the execution engine.
+# This YAML is ADVISORY enforcement — the real isolation comes from Claude Code's
+# permission model + per-agent tool whitelists. See CLAUDE.md §4 for the contract.
+#
+# Agents MUST call policy_guard before any write/shell action.
+# Violations append an entry to memory/logs.json with outcome: "policy_violation".
+
+version: 1
+
+file_access:
+  # Absolute deny list (match against POSIX-style relative paths; globs allowed).
+  read:
+    denied:
+      - ".env"
+      - ".env.*"
+      - "*.key"
+      - "*.pem"
+      - "*.p12"
+      - "**/id_rsa*"
+      - "**/credentials.json"
+
+  write:
+    # Writes to these paths are hard-denied.
+    denied:
+      - ".env"
+      - ".env.*"
+      - ".git/**"
+      - ".claude/CLAUDE.md"       # constitution edited only via explicit amendment log
+      - ".claude/policies/**"     # policies edited only via direct user instruction
+
+    # Writes to these paths are allowed.
+    allowed:
+      - ".claude/agents/**"
+      - ".claude/memory/**"
+      - ".claude/observability/**"
+      - ".claude/workflows/**"
+      - ".claude/tools/**"
+      - ".claude/core/**"
+      - ".claude/commands/**"
+      - ".claude/hooks/**"
+      - ".claude/runtime.md"
+      - ".claude/USAGE.md"
+      - ".claude/settings.json"
+      - ".claude/settings.local.json"
+      - "project_overview.md"
+      - "CLAUDE.md"              # root project entry point (not the constitution)
+      - "AGENTS.md"              # master agent harness table
+      - "RULES.md"               # global always-follow coding rules
+      - ".mcp.json"              # MCP server configuration
+      - ".claude/identity.json" # user persona config
+      - "SPECIALISTS.md"             # v5.3 specialist registry (routing map to voltagent plugins)
+      - "CLAUDE-README.md"          # v5.6 comprehensive onboarding + reference guide
+      - ".claude/notes/**"         # v5.2 agent narrative writes (Graphify era)
+      - ".claude/rules/**"         # v5.4 path-scoped rules (Anthropic best-practice)
+      - ".claude/skills/**"        # v5.4 skills (migration target from commands/)
+      - ".worktreeinclude"         # v5.4 worktree include list
+      - "CLAUDE.local.md"          # v5.4 personal project overrides (gitignored)
+      - "CLAUDE.local.md.example"  # v5.4 personal-overrides template (committed)
+      - "case-study/**"             # v5.6 Council-authorized stress-test workspace
+      - ".claude/registry.json"    # v5.2 agent catalogue (moved from wiki/)
+      - ".claude/plugins-manifest.json" # v5.6 plugin install-by-reference manifest
+      - "graphify-out/**"          # Graphify build output
+      - ".graphify/**"             # Graphify cache (if created)
+      # All other writes require explicit escalation.
+
+tools:
+  shell:
+    # Patterns checked with substring match against the full command string.
+    denied_patterns:
+      - "rm -rf"
+      - "git push --force"
+      - "git push -f"
+      - "git reset --hard"
+      - "git clean -f"
+      - ":(){:|:&};:"          # fork bomb
+      - "dd if=/dev/zero"
+      - "mkfs"
+      - "chmod 777"
+      - "curl | sh"
+      - "wget | sh"
+      - "> /dev/sda"
+
+  network:
+    # Only these tools may reach the internet.
+    allowed_tools:
+      - "repo_ingestor.py"
+      - "nightly_improvement.py"  # v5.6 Council-authorized; fetches canonical Claude Code docs
+    requires_logging: true       # every network call appends to memory/logs.json
+
+execution:
+  max_recursion_depth: 5
+  max_new_agents_per_task: 2
+  max_agents_per_session: 10
+  max_tool_runtime_seconds: 60
+  max_file_writes_per_agent_call: 20
+
+  # Circuit breaker — trip after N identical failures in a session.
+  circuit_breaker:
+    threshold: 3
+    session_scope: true
+
+  # Retry backoff (seconds).
+  retry:
+    max_attempts: 2
+    backoff_seconds: [1, 2, 4]
+
+governance:
+  # Require policy_guard consultation before these action classes.
+  must_consult_before:
+    - "file.write"
+    - "shell.exec"
+    - "network.request"
+    - "agent.create"
+    - "registry.amend"
+
+  # Actions that always require user approval, never autonomous.
+  requires_user_approval:
+    - "constitution.amend"
+    - "policy.edit"
+    - "force_push"
+    - "delete_concept"

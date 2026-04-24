@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "agent": "wiki_updater",
+      "task_id": "v5.2-graphify-migration",
+      "timestamp": "2026-04-24T08:04:55.393879+00:00",
+      "event": "deprecated",
+      "reason": "Replaced by graphify_agent + direct .claude/notes/ writes in v5.2"
+    },
+    {
+      "agent": "wiki_curator",
+      "task_id": "v5.2-graphify-migration",
+      "timestamp": "2026-04-24T08:04:55.393879+00:00",
+      "event": "deprecated",
+      "reason": "Replaced by graphify_agent + direct .claude/notes/ writes in v5.2"
+    },
+    {
+      "agent": "orchestrator",
+      "task_id": "v5.5-lead-agent-migration",
+      "timestamp": "2026-04-24T12:06:03.030714+00:00",
+      "event": "deprecated",
+      "reason": "Main session = Lead Agent per Agent Teams protocol. Routing in .claude/rules/routing.md."
+    }
+  ]
+}

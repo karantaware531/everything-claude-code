@@ -1,0 +1,391 @@
+{
+  "version": 1,
+  "tools": [
+    {
+      "name": "agent_validator",
+      "path": ".claude/tools/agent_validator.py",
+      "capabilities": [
+        "validate agent spec",
+        "check agent similarity",
+        "registry self-test"
+      ],
+      "inputs": [
+        "spec: json path",
+        "phrase: string"
+      ],
+      "outputs": [
+        "exit_code: int",
+        "result: json"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "code_executor",
+      "path": ".claude/tools/code_executor.py",
+      "capabilities": [
+        "run untrusted python",
+        "evaluate expression",
+        "denylist scan"
+      ],
+      "inputs": [
+        "source: string",
+        "file: path",
+        "timeout: int"
+      ],
+      "outputs": [
+        "stdout",
+        "stderr",
+        "exit_code"
+      ],
+      "network": false,
+      "safety_level": "guarded"
+    },
+    {
+      "name": "repo_ingestor",
+      "path": ".claude/tools/repo_ingestor.py",
+      "capabilities": [
+        "clone github repo",
+        "extract source files",
+        "bundle to raw/"
+      ],
+      "inputs": [
+        "url: string",
+        "max_files: int"
+      ],
+      "outputs": [
+        "raw_bundle_file: path"
+      ],
+      "network": true,
+      "safety_level": "guarded"
+    },
+    {
+      "name": "policy_guard",
+      "path": ".claude/tools/policy_guard.py",
+      "capabilities": [
+        "check action against security.yaml",
+        "deny unsafe operations"
+      ],
+      "inputs": [
+        "action: string"
+      ],
+      "outputs": [
+        "decision: allow|deny",
+        "reason: string"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "reset_test_state",
+      "path": ".claude/tools/reset_test_state.py",
+      "capabilities": [
+        "reset transactional smoke-test state in memory/",
+        "optionally remove bootstrap smoke-test concepts from wiki/",
+        "refuse to reset when real production data is detected"
+      ],
+      "inputs": [
+        "mode: {dry-run|apply}",
+        "include_wiki_smoke: bool",
+        "force: bool"
+      ],
+      "outputs": [
+        "plan_report: json",
+        "reset_result: json"
+      ],
+      "network": false,
+      "safety_level": "guarded"
+    },
+    {
+      "name": "hook:enforce_policy_on_bash",
+      "path": ".claude/hooks/enforce_policy_on_bash.py",
+      "capabilities": [
+        "PreToolUse(Bash) hard-enforce security.yaml shell patterns"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0|2",
+        "stderr: block_reason"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:enforce_policy_on_write",
+      "path": ".claude/hooks/enforce_policy_on_write.py",
+      "capabilities": [
+        "PreToolUse(Write|Edit|MultiEdit|NotebookEdit) hard-enforce file_access policy"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0|2",
+        "stderr: block_reason"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:karpathy_invariant_check",
+      "path": ".claude/hooks/karpathy_invariant_check.py",
+      "capabilities": [
+        "PostToolUse soft-warn if markdown appears under memory/"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: warning_details"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:session_health_probe",
+      "path": ".claude/hooks/session_health_probe.py",
+      "capabilities": [
+        "SessionStart informational banner (registry, agent count, graph, failure rate)"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: health_summary"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:suggest_epoch_learner",
+      "path": ".claude/hooks/suggest_epoch_learner.py",
+      "capabilities": [
+        "Stop reminder when >= 20 agent invocations since last epoch"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: suggestion_or_silence"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:gateguard",
+      "path": ".claude/hooks/gateguard.py",
+      "capabilities": [
+        "PreToolUse(Edit|Write|MultiEdit) fact-forcing gate (+2.25 quality)",
+        "hard-block protected files without gate declaration"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0|2",
+        "stdout: advisory_or_silence",
+        "stderr: block_reason"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:precompact_state_saver",
+      "path": ".claude/hooks/precompact_state_saver.py",
+      "capabilities": [
+        "PreCompact session state snapshot to ~/.claude/session-data/"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: snapshot_path"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "harness_audit",
+      "path": ".claude/tools/harness_audit.py",
+      "capabilities": [
+        "7-category quality audit",
+        "score tool coverage",
+        "score context efficiency",
+        "score quality gates",
+        "score memory persistence",
+        "score eval coverage",
+        "score security guardrails",
+        "score cost efficiency"
+      ],
+      "inputs": [
+        "--json: flag",
+        "--category: int",
+        "--threshold: float"
+      ],
+      "outputs": [
+        "overall: float",
+        "categories: dict",
+        "verdict: PASS|WARN|FAIL"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:notification",
+      "path": ".claude/hooks/notification.py",
+      "capabilities": [
+        "Notification event desktop toast (Windows/Mac/Linux)"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:post_compact_reinject",
+      "path": ".claude/hooks/post_compact_reinject.py",
+      "capabilities": [
+        "PostCompact + SessionStart(compact) re-inject critical context"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: context_reminder"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:config_change_audit",
+      "path": ".claude/hooks/config_change_audit.py",
+      "capabilities": [
+        "ConfigChange audit-log to memory/logs.json"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:session_end_summary",
+      "path": ".claude/hooks/session_end_summary.py",
+      "capabilities": [
+        "SessionEnd session summary to ~/.claude/session-data/"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "file: session-end-*.json"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:subagent_lifecycle",
+      "path": ".claude/hooks/subagent_lifecycle.py",
+      "capabilities": [
+        "SubagentStart + SubagentStop trace to observability/traces.json"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0"
+      ],
+      "network": false,
+      "safety_level": "safe"
+    },
+    {
+      "name": "hook:security_reminder",
+      "path": ".claude/hooks/security_reminder_hook.py",
+      "capabilities": [
+        "PreToolUse(Edit|Write|MultiEdit) content-level vuln pattern scanner",
+        "9 patterns: GitHub Actions injection, child_process.exec, new Function, eval, dangerouslySetInnerHTML, document.write, innerHTML, pickle, os.system",
+        "session-scoped dedup via ~/.claude/security_warnings_state_<sid>.json",
+        "hard-block on first match per file per session (exit 2)"
+      ],
+      "inputs": [
+        "stdin: claude_code_hook_event_json"
+      ],
+      "outputs": [
+        "exit_code: 0|2",
+        "stderr: security_warning"
+      ],
+      "network": false,
+      "safety_level": "safe",
+      "env": [
+        "ENABLE_SECURITY_REMINDER=0 disables",
+        "AGENTIC_OS_HOOKS_DISABLED=1 disables"
+      ]
+    },
+    {
+      "name": "nightly_improvement",
+      "path": ".claude/tools/nightly_improvement.py",
+      "capabilities": [
+        "fetch 10 canonical Claude Code docs",
+        "diff vs cached synthesis",
+        "generate proposal to .claude/notes/concepts/proposals/",
+        "submit to Consensus Council via protocol envelope",
+        "log run to memory/logs.json",
+        "Council-authorized v5.6"
+      ],
+      "inputs": [
+        "--dry-run: flag"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "proposal_file: path",
+        "traces: json envelopes",
+        "memory log entry"
+      ],
+      "network": true,
+      "safety_level": "guarded",
+      "env": [
+        "AGENTIC_OS_NIGHTLY_DISABLED=1 kill switch"
+      ]
+    },
+    {
+      "name": "install_plugins",
+      "path": ".claude/tools/install_plugins.py",
+      "capabilities": [
+        "read plugins-manifest.json",
+        "print install commands for core plugins",
+        "support --all for optional",
+        "support --lsp <lang> for language LSPs",
+        "support --exec to run via claude CLI",
+        "support --list for full manifest display"
+      ],
+      "inputs": [
+        "--all flag",
+        "--lsp LANG string",
+        "--exec flag",
+        "--list flag"
+      ],
+      "outputs": [
+        "exit_code: 0",
+        "stdout: install commands"
+      ],
+      "network": false,
+      "safety_level": "safe",
+      "council_decision": "v5.3-specialist-integration.md (adopt by reference)"
+    }
+  ]
+}

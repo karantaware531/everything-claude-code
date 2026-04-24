@@ -1,0 +1,45 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "README",
+      "file_type": "document",
+      "source_file": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\notes\\README.md",
+      "source_location": null,
+      "id": "readme",
+      "community": 1,
+      "norm_label": "readme"
+    },
+    {
+      "label": "claude-code-best-practices-v5.4",
+      "file_type": "document",
+      "source_file": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\notes\\concepts\\claude-code-best-practices-v5.4.md",
+      "source_location": null,
+      "id": "claude_code_best_practices_v5.4",
+      "community": 0,
+      "norm_label": "claude-code-best-practices-v5.4"
+    },
+    {
+      "label": "v5.3-specialist-integration",
+      "file_type": "document",
+      "source_file": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\notes\\consensus\\v5.3-specialist-integration.md",
+      "source_location": null,
+      "id": "v5.3_specialist_integration",
+      "community": 2,
+      "norm_label": "v5.3-specialist-integration"
+    },
+    {
+      "label": "v5.4-anthropic-best-practices",
+      "file_type": "document",
+      "source_file": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\notes\\consensus\\v5.4-anthropic-best-practices.md",
+      "source_location": null,
+      "id": "v5.4_anthropic_best_practices",
+      "community": 3,
+      "norm_label": "v5.4-anthropic-best-practices"
+    }
+  ],
+  "links": [],
+  "hyperedges": []
+}

@@ -1,0 +1,306 @@
+[
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424132252",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T13:22:52.369598+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424132315",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T13:23:15.646145+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424132709",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T13:27:09.409354+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424133215",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T13:32:15.744635+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424140524",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:05:24.037246+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424140535",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:05:35.281988+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424140543",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:05:43.991455+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424140611",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:06:11.742166+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424140622",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:06:22.945014+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424141749",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:17:49.574685+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424141856",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:18:56.685317+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424141912",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:19:12.070470+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424141914",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:19:14.951022+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424142419",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:24:19.721217+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424142525",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:25:25.597918+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstart-20260424142531",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:25:31.043290+00:00",
+    "payload": {
+      "event": "SubagentStart",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424142538",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:25:38.369121+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424142554",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T14:25:54.584073+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:subagent_lifecycle",
+    "to": "unknown",
+    "task_id": "unknown",
+    "trace_id": "subagent-subagentstop-20260424152729",
+    "kind": "subagent_lifecycle",
+    "context_ref": null,
+    "timestamp": "2026-04-24T15:27:29.286520+00:00",
+    "payload": {
+      "event": "SubagentStop",
+      "subagent": "unknown",
+      "duration_ms": null,
+      "outcome": null
+    },
+    "protocol_version": "1.0"
+  }
+]

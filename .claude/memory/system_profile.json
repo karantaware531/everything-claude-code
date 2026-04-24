@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "updated_at": null,
+  "epoch_count": 0,
+  "domain_competence": {},
+  "weak_spots": [],
+  "strong_pairings": [],
+  "global_metrics": {
+    "total_tasks": 0,
+    "success_rate": null,
+    "avg_latency_ms": null,
+    "avg_reward": null
+  }
+}

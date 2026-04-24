@@ -1,0 +1,50 @@
+{
+  "task_type": "rag",
+  "description": "Retrieval-augmented answer from compiled wiki + repo evidence.",
+  "task_id_template": "t-rag-{uuid}",
+  "goal": "Produce a cited, evidence-grounded answer to a research question.",
+  "nodes": [
+    {
+      "id": "n1",
+      "capability": "mine repository for information",
+      "input": {"question": "<user question>", "scope": null},
+      "expected_output": "findings: list_of_structured_claims",
+      "assigned_agent": "research_agent",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n2",
+      "capability": "link related concepts",
+      "input": {"changed": "<from n1>", "new": [], "contradictions": [], "domain": "concepts"},
+      "expected_output": "links_added: int",
+      "assigned_agent": "wiki_curator",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n3",
+      "capability": "disambiguate user goal",
+      "input": {"task": "<user question>", "context": "<augmented with n1 findings>"},
+      "expected_output": "reasoning: json",
+      "assigned_agent": "reasoner",
+      "retries_allowed": 0
+    },
+    {
+      "id": "n4",
+      "capability": "check correctness of agent output",
+      "input": {"agent_output": "<from n3>", "expected_contract": "cited answer"},
+      "expected_output": "verdict: json",
+      "assigned_agent": "evaluator",
+      "retries_allowed": 0
+    }
+  ],
+  "edges": [
+    ["n1", "n2"],
+    ["n2", "n3"],
+    ["n3", "n4"]
+  ],
+  "seeded_from_strategy": null,
+  "notes": [
+    "Planner matches tasks like 'what does X do?', 'how is Y implemented?', 'find usages of Z'.",
+    "If findings cite wiki/raw/ directly, evaluator will fail with hallucination_risk bumped."
+  ]
+}

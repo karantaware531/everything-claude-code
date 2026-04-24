@@ -1,0 +1,59 @@
+{
+  "task_type": "codegen",
+  "description": "Generate or modify source code with tests + review + eval.",
+  "task_id_template": "t-codegen-{uuid}",
+  "goal": "Produce tested, reviewed code changes that satisfy the user's ask.",
+  "nodes": [
+    {
+      "id": "n1",
+      "capability": "decompose task into DAG",
+      "input": {"user_task": "<from context>"},
+      "expected_output": "refined_dag: json",
+      "assigned_agent": "decomposer",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n2",
+      "capability": "write source code",
+      "input": {"task": "<from n1>", "target_files": "<from user>"},
+      "expected_output": "changed_files: list, test_results: string",
+      "assigned_agent": "code_agent",
+      "retries_allowed": 2
+    },
+    {
+      "id": "n3",
+      "capability": "red-team agent output",
+      "input": {"agent_output": "<from n2>", "agent_name": "code_agent", "expected_output": "<n2 contract>"},
+      "expected_output": "critique: json",
+      "assigned_agent": "critic",
+      "retries_allowed": 1
+    },
+    {
+      "id": "n4",
+      "capability": "check correctness of agent output",
+      "input": {"agent_output": "<from n2>", "critique": "<from n3>", "expected_contract": "<n2 contract>"},
+      "expected_output": "verdict: json",
+      "assigned_agent": "evaluator",
+      "retries_allowed": 0
+    },
+    {
+      "id": "n5",
+      "capability": "ingest validated artefact into wiki",
+      "input": {"artefact": "<from n2>", "domain": "experience"},
+      "expected_output": "concept_files: list",
+      "assigned_agent": "wiki_updater",
+      "retries_allowed": 1
+    }
+  ],
+  "edges": [
+    ["n1", "n2"],
+    ["n2", "n3"],
+    ["n3", "n4"],
+    ["n4", "n5"]
+  ],
+  "seeded_from_strategy": null,
+  "notes": [
+    "Planner should match tasks like 'add feature X', 'fix bug in Y', 'refactor Z' against this template.",
+    "If code_agent fails twice, circuit breaker will trip and escalate — do not loop further."
+  ]
+}

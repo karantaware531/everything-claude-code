@@ -1,0 +1,65 @@
+# .claude/policies/governance.yaml
+#
+# Declarative governance tiers for Agentic OS v3.
+# Consumed by meta_controller and orchestrator to decide HITL escalation semantics.
+# Paired with security.yaml (which handles hard allow/deny) and config.yaml
+# (which tunes selector + autonomy thresholds).
+
+version: 1
+
+# Four autonomy tiers. meta_controller picks one per task; orchestrator enforces.
+tiers:
+  "1":
+    name: autonomous
+    description: Full v2 execution. User sees only the summary.
+    requires_user: never
+    notify_channel: trace         # observability/traces.json only
+  "2":
+    name: notify
+    description: Execute, but surface every node-level decision.
+    requires_user: never
+    notify_channel: summary       # observability/summary.py highlights this
+  "3":
+    name: approval_required
+    description: Pause before any file write, shell exec, or network call.
+    requires_user: before_action
+    notify_channel: blocking
+  "4":
+    name: policy_amendment
+    description: Any change to constitution, policies, or registry beyond seed.
+    requires_user: always
+    notify_channel: blocking
+
+# Default tier per action class. meta_controller may bump up; NEVER down.
+# policy_guard still runs independently and can hard-deny regardless.
+action_tiers:
+  constitution.amend:   "4"
+  policy.edit:          "4"
+  architecture.modify:  "4"   # v4: any architecture_optimizer proposal application
+  registry.amend:       "3"
+  registry.deprecate:   "3"
+  registry.merge:       "3"
+  agent.create:         "2"
+  network.request:      "2"
+  shell.exec:           "2"
+  file.write:           "1"   # default; path-specific rules in security.yaml may tighten
+  force_push:           "4"
+
+# Fallback when the action isn't in action_tiers.
+defaults:
+  unknown_action: "3"
+
+# Audit policy \u2014 every tier-3 and tier-4 event gets a dedicated log entry.
+audit:
+  log_file: memory/logs.json
+  required_fields: [task_id, actor_agent, action, tier, decision, timestamp, evidence]
+  retention_days: 365
+
+# Optional session-level overrides the user can request via /autonomy.
+session_overrides:
+  allowed: true
+  max_override_downgrade: 1   # user can drop the tier by at most 1 (e.g. 3 \u2192 2, never 3 \u2192 1)
+  never_below_tier_for_actions:
+    constitution.amend: "4"
+    policy.edit:        "4"
+    force_push:         "4"
