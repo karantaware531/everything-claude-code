@@ -958,6 +958,118 @@
       "source": "user_settings",
       "file_path": "C:\\Users\\ktaware\\.claude\\settings.json",
       "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:06.772408+00:00",
+      "outcome": "config_change",
+      "source": "project_settings",
+      "file_path": "c:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:06.246826+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "c:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\skills\\README.md",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:07.536949+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\skills\\README.md",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:08.169855+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:08.307650+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:09.205110+00:00",
+      "outcome": "config_change",
+      "source": "project_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:13.131761+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\commands\\commit-push-pr.md",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:14.566015+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "c:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:14.814171+00:00",
+      "outcome": "config_change",
+      "source": "project_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:15.399405+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\commands\\clean_gone.md",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:15.507377+00:00",
+      "outcome": "config_change",
+      "source": "project_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:15.880420+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:17.788836+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "c:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\skills\\README.md",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-24T17:44:19.386798+00:00",
+      "outcome": "config_change",
+      "source": "skills",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\skills\\README.md",
+      "change_kind": "unknown"
     }
   ]
 }
