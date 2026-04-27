@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-04-24T16:55:30Z",
+  "updated_at": "2026-04-27T05:46:31Z",
   "active": {},
   "history": [
     {
@@ -262,6 +262,16 @@
       "allocated_at": "2026-04-24T16:55:29Z",
       "status": "test_runner",
       "closed_at": "2026-04-24T16:55:30Z"
+    },
+    {
+      "task_id": "t-test-runner-smoke",
+      "tokens_allocated": 1000,
+      "tokens_used": 0,
+      "time_seconds_allocated": 60,
+      "time_ms_used": 0,
+      "allocated_at": "2026-04-27T05:46:27Z",
+      "status": "test_runner",
+      "closed_at": "2026-04-27T05:46:31Z"
     }
   ]
 }

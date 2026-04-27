@@ -138,7 +138,10 @@
       "Bash(py -3 .claude/tools/install_plugins.py)",
       "Bash(py -3 .claude/tools/_v57_amendment.py)",
       "Bash(py -3 .claude/tools/_v57_correction.py)",
-      "Bash(rm -f .claude/tools/_v57_correction.py)"
+      "Bash(rm -f .claude/tools/_v57_correction.py)",
+      "Bash(py -3 .claude/tools/nightly_improvement.py)",
+      "Bash(py -3 .claude/tools/graphify_update.py)",
+      "Bash(git add *)"
     ]
   }
 }

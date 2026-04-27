@@ -302,5 +302,135 @@
       "outcome": null
     },
     "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:nightly_improvement",
+    "to": "critic",
+    "task_id": "nightly-2026-04-27",
+    "trace_id": "nightly-919aaa67b7c8-critic",
+    "kind": "nightly_proposal",
+    "context_ref": "7f45b65fb0bd",
+    "timestamp": "2026-04-27T05:44:57.548892+00:00",
+    "payload": {
+      "proposal_file": ".claude\\notes\\concepts\\proposals\\nightly-2026-04-27.md",
+      "changes_detected": 10,
+      "urls": [
+        "https://code.claude.com/docs/en/overview",
+        "https://code.claude.com/docs/en/features-overview",
+        "https://code.claude.com/docs/en/claude-directory",
+        "https://code.claude.com/docs/en/context-window",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/permission-modes",
+        "https://code.claude.com/docs/en/best-practices",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/agent-teams",
+        "https://code.claude.com/docs/en/hooks-guide"
+      ]
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:nightly_improvement",
+    "to": "evaluator",
+    "task_id": "nightly-2026-04-27",
+    "trace_id": "nightly-919aaa67b7c8-evaluator",
+    "kind": "nightly_proposal",
+    "context_ref": "7f45b65fb0bd",
+    "timestamp": "2026-04-27T05:44:57.548892+00:00",
+    "payload": {
+      "proposal_file": ".claude\\notes\\concepts\\proposals\\nightly-2026-04-27.md",
+      "changes_detected": 10,
+      "urls": [
+        "https://code.claude.com/docs/en/overview",
+        "https://code.claude.com/docs/en/features-overview",
+        "https://code.claude.com/docs/en/claude-directory",
+        "https://code.claude.com/docs/en/context-window",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/permission-modes",
+        "https://code.claude.com/docs/en/best-practices",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/agent-teams",
+        "https://code.claude.com/docs/en/hooks-guide"
+      ]
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:nightly_improvement",
+    "to": "security",
+    "task_id": "nightly-2026-04-27",
+    "trace_id": "nightly-919aaa67b7c8-security",
+    "kind": "nightly_proposal",
+    "context_ref": "7f45b65fb0bd",
+    "timestamp": "2026-04-27T05:44:57.548892+00:00",
+    "payload": {
+      "proposal_file": ".claude\\notes\\concepts\\proposals\\nightly-2026-04-27.md",
+      "changes_detected": 10,
+      "urls": [
+        "https://code.claude.com/docs/en/overview",
+        "https://code.claude.com/docs/en/features-overview",
+        "https://code.claude.com/docs/en/claude-directory",
+        "https://code.claude.com/docs/en/context-window",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/permission-modes",
+        "https://code.claude.com/docs/en/best-practices",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/agent-teams",
+        "https://code.claude.com/docs/en/hooks-guide"
+      ]
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:nightly_improvement",
+    "to": "reflection",
+    "task_id": "nightly-2026-04-27",
+    "trace_id": "nightly-919aaa67b7c8-reflection",
+    "kind": "nightly_proposal",
+    "context_ref": "7f45b65fb0bd",
+    "timestamp": "2026-04-27T05:44:57.548892+00:00",
+    "payload": {
+      "proposal_file": ".claude\\notes\\concepts\\proposals\\nightly-2026-04-27.md",
+      "changes_detected": 10,
+      "urls": [
+        "https://code.claude.com/docs/en/overview",
+        "https://code.claude.com/docs/en/features-overview",
+        "https://code.claude.com/docs/en/claude-directory",
+        "https://code.claude.com/docs/en/context-window",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/permission-modes",
+        "https://code.claude.com/docs/en/best-practices",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/agent-teams",
+        "https://code.claude.com/docs/en/hooks-guide"
+      ]
+    },
+    "protocol_version": "1.0"
+  },
+  {
+    "from": "hook:nightly_improvement",
+    "to": "knowledge_validator",
+    "task_id": "nightly-2026-04-27",
+    "trace_id": "nightly-919aaa67b7c8-knowledge_validator",
+    "kind": "nightly_proposal",
+    "context_ref": "7f45b65fb0bd",
+    "timestamp": "2026-04-27T05:44:57.548892+00:00",
+    "payload": {
+      "proposal_file": ".claude\\notes\\concepts\\proposals\\nightly-2026-04-27.md",
+      "changes_detected": 10,
+      "urls": [
+        "https://code.claude.com/docs/en/overview",
+        "https://code.claude.com/docs/en/features-overview",
+        "https://code.claude.com/docs/en/claude-directory",
+        "https://code.claude.com/docs/en/context-window",
+        "https://code.claude.com/docs/en/memory",
+        "https://code.claude.com/docs/en/permission-modes",
+        "https://code.claude.com/docs/en/best-practices",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/agent-teams",
+        "https://code.claude.com/docs/en/hooks-guide"
+      ]
+    },
+    "protocol_version": "1.0"
   }
 ]
