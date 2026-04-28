@@ -62,6 +62,7 @@ file_access:
       - "case-study/**"             # v5.6 Council-authorized stress-test workspace
       - ".claude/registry.json"    # v5.2 agent catalogue (moved from wiki/)
       - ".claude/plugins-manifest.json" # v5.6 plugin install-by-reference manifest
+      - "manifest/**"                 # v5.6+ nightly improvement source manifest
       - "graphify-out/**"          # Graphify build output
       - ".graphify/**"             # Graphify cache (if created)
       # All other writes require explicit escalation.

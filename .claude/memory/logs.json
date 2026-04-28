@@ -1099,6 +1099,14 @@
       "source": "local_settings",
       "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
       "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-28T16:05:12.788244+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
     }
   ]
 }

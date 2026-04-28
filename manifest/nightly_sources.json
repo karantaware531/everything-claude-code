@@ -1,0 +1,153 @@
+{
+  "$schema_note": "Nightly improvement source manifest v1.0 (2026-04-28). Edit sources here — nightly_improvement.py loads this at runtime.",
+  "version": "1.0",
+  "sources": {
+    "official_docs": [
+      "https://docs.anthropic.com/en/docs/claude-code/overview",
+      "https://docs.anthropic.com/en/docs/claude-code/cli-reference",
+      "https://docs.anthropic.com/en/docs/claude-code/hooks",
+      "https://docs.anthropic.com/en/docs/claude-code/settings",
+      "https://docs.anthropic.com/en/docs/claude-code/memory",
+      "https://docs.anthropic.com/en/docs/claude-code/mcp",
+      "https://docs.anthropic.com/en/docs/claude-code/sub-agents",
+      "https://docs.anthropic.com/en/docs/claude-code/github-actions",
+      "https://docs.anthropic.com/en/docs/claude-code/tutorials",
+      "https://docs.anthropic.com/en/docs/claude-code/troubleshooting",
+      "https://www.anthropic.com/research/building-effective-agents",
+      "https://www.anthropic.com/research/swe-bench-sonnet",
+      "https://docs.anthropic.com/en/docs/build-with-claude/tool-use",
+      "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+      "https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching",
+      "https://docs.anthropic.com/en/docs/build-with-claude/extended-thinking",
+      "https://docs.anthropic.com/en/api/messages",
+      "https://docs.anthropic.com/en/release-notes/claude-code"
+    ],
+    "mcp_ecosystem": [
+      "https://modelcontextprotocol.io/docs/concepts/architecture",
+      "https://modelcontextprotocol.io/docs/concepts/tools",
+      "https://modelcontextprotocol.io/docs/concepts/resources",
+      "https://modelcontextprotocol.io/docs/concepts/prompts",
+      "https://modelcontextprotocol.io/docs/concepts/roots",
+      "https://modelcontextprotocol.io/docs/concepts/sampling",
+      "https://modelcontextprotocol.io/docs/concepts/elicitation",
+      "https://modelcontextprotocol.io/docs/concepts/transports",
+      "https://modelcontextprotocol.io/changelog",
+      "https://raw.githubusercontent.com/modelcontextprotocol/servers/main/README.md",
+      "https://raw.githubusercontent.com/punkpeye/awesome-mcp-servers/main/README.md",
+      "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/main/README.md",
+      "https://raw.githubusercontent.com/modelcontextprotocol/typescript-sdk/main/README.md",
+      "https://raw.githubusercontent.com/jlowin/fastmcp/main/README.md"
+    ],
+    "agentic_frameworks": [
+      "https://langchain-ai.github.io/langgraph/concepts/agentic_concepts/",
+      "https://langchain-ai.github.io/langgraph/concepts/multi_agent/",
+      "https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/",
+      "https://langchain-ai.github.io/langgraph/how-tos/react-agent-from-scratch/",
+      "https://docs.temporal.io/develop/python/core-application",
+      "https://docs.temporal.io/develop/python/failure-detection",
+      "https://docs.langfuse.com/docs/tracing",
+      "https://docs.langfuse.com/docs/scores/overview"
+    ],
+    "cloud_platforms": [
+      "https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html",
+      "https://docs.aws.amazon.com/bedrock/latest/userguide/tool-use.html",
+      "https://github.com/ollama/ollama/blob/main/docs/api.md",
+      "https://github.com/ollama/ollama/blob/main/docs/modelfile.md"
+    ],
+    "community": [
+      "https://simonwillison.net/tags/llm/",
+      "https://raw.githubusercontent.com/e2b-dev/awesome-ai-agents/main/README.md",
+      "https://raw.githubusercontent.com/kyrolabs/awesome-langchain/main/README.md",
+      "https://raw.githubusercontent.com/anthropics/claude-code/main/README.md"
+    ],
+    "github_search": [
+      "https://github.com/search?q=claude+code+hooks&sort=updated&type=repositories",
+      "https://github.com/search?q=CLAUDE.md&sort=updated&type=code",
+      "https://github.com/search?q=agentic+os+claude&sort=stars&type=repositories",
+      "https://github.com/trending/python?since=weekly&spoken_language_code=en"
+    ],
+    "arxiv_searches": [
+      "https://arxiv.org/search/?searchtype=all&query=llm+agent+tool+use&start=0",
+      "https://arxiv.org/search/?searchtype=all&query=multi+agent+orchestration&start=0",
+      "https://arxiv.org/search/?searchtype=all&query=react+reasoning+acting+agent&start=0",
+      "https://arxiv.org/search/?searchtype=all&query=prompt+injection+defense&start=0"
+    ],
+    "compliance_domain": [
+      "https://github.com/search?q=trade+surveillance+AI&sort=updated",
+      "https://github.com/search?q=compliance+alert+enrichment&sort=stars"
+    ]
+  },
+  "search_queries": {
+    "engine": "web_search",
+    "provider_priority": ["brave", "serper", "duckduckgo"],
+    "run_frequency": "nightly",
+    "queries": [
+      "Claude Code best practices 2025",
+      "agentic AI development patterns 2025",
+      "LLM agent orchestration best practices",
+      "multi-agent system design patterns",
+      "ReAct agent loop improvements",
+      "LLM tool use best practices",
+      "autonomous AI agent production patterns",
+      "AI agent memory management strategies",
+      "CLAUDE.md best practices examples",
+      ".claude folder structure best practices",
+      "Claude Code hooks examples",
+      "Claude Code sub-agents patterns",
+      "Claude Code memory files tips",
+      "Claude Code settings.json configuration",
+      "MCP server best practices 2025",
+      "Model Context Protocol new tools",
+      "FastMCP server patterns",
+      "MCP tool schema design",
+      "Claude Code skills system",
+      "Claude Code agent registry patterns",
+      "LLM skill routing best practices",
+      "LLM observability tracing production",
+      "Langfuse tracing best practices",
+      "AI agent audit logging patterns",
+      "prompt injection defense techniques 2025",
+      "LLM agent security guardrails",
+      "agentic AI trust boundaries",
+      "LangGraph ReAct node optimization",
+      "Temporal workflow AI agent patterns",
+      "Ollama tool calling production tips",
+      "AWS Bedrock agent best practices",
+      "AI compliance surveillance automation",
+      "trade alert enrichment AI patterns",
+      "market manipulation detection AI"
+    ]
+  },
+  "signal_categories": [
+    "HOOKS", "AGENTS", "SKILLS", "TOOLS", "MEMORY",
+    "SETTINGS", "SECURITY", "OBSERVABILITY", "PERF",
+    "WORKFLOW", "COMPLIANCE", "PAPER_INSIGHTS", "TRENDING_REPOS", "MCP_CHANGELOG"
+  ],
+  "fetch_config": {
+    "timeout_seconds": 30,
+    "max_depth": 1,
+    "arxiv_max_papers": 5,
+    "github_trending_limit": 15,
+    "store_raw": true,
+    "raw_path": ".claude/memory/fetched_docs/",
+    "hash_file": ".claude/memory/nightly_doc_hashes.json",
+    "search_hash_file": ".claude/memory/nightly_search_hashes.json",
+    "scrape_frequency": {
+      "official_docs": "nightly",
+      "mcp_ecosystem": "nightly",
+      "agentic_frameworks": "weekly",
+      "cloud_platforms": "weekly",
+      "community": "weekly",
+      "github_search": "weekly",
+      "arxiv_searches": "weekly",
+      "compliance_domain": "weekly"
+    }
+  },
+  "tier_scoring": {
+    "1": "docs-only, no code change — auto-apply",
+    "2": "minor additions (hooks, skill descriptions, settings) — auto-apply",
+    "3": "new agents, new MCP servers, constitution edit — PENDING_COUNCIL_DECISION",
+    "4": "policy change, security rule change — user approval required",
+    "5": "architecture change — architecture_optimizer + user approval"
+  }
+}
