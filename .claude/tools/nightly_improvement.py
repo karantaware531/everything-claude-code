@@ -20,8 +20,10 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -45,6 +47,51 @@ DOC_URLS = [
     "https://code.claude.com/docs/en/sub-agents",
     "https://code.claude.com/docs/en/agent-teams",
     "https://code.claude.com/docs/en/hooks-guide",
+]
+
+SEARCH_QUERIES: list[str] = [
+    # Agentic AI — General
+    "Claude Code best practices 2025",
+    "agentic AI development patterns 2025",
+    "LLM agent orchestration best practices",
+    "multi-agent system design patterns",
+    "ReAct agent loop improvements",
+    "LLM tool use best practices",
+    "autonomous AI agent production patterns",
+    "AI agent memory management strategies",
+    # .claude folder & CLAUDE.md
+    "CLAUDE.md best practices examples",
+    ".claude folder structure best practices",
+    "Claude Code hooks examples",
+    "Claude Code sub-agents patterns",
+    "Claude Code memory files tips",
+    "Claude Code settings.json configuration",
+    # MCP
+    "MCP server best practices 2025",
+    "Model Context Protocol new tools",
+    "FastMCP server patterns",
+    "MCP tool schema design",
+    # Skills & Agents
+    "Claude Code skills system",
+    "Claude Code agent registry patterns",
+    "LLM skill routing best practices",
+    # Observability
+    "LLM observability tracing production",
+    "Langfuse tracing best practices",
+    "AI agent audit logging patterns",
+    # Security
+    "prompt injection defense techniques 2025",
+    "LLM agent security guardrails",
+    "agentic AI trust boundaries",
+    # Stack-specific
+    "LangGraph ReAct node optimization",
+    "Temporal workflow AI agent patterns",
+    "Ollama tool calling production tips",
+    "AWS Bedrock agent best practices",
+    # Domain-specific
+    "AI compliance surveillance automation",
+    "trade alert enrichment AI patterns",
+    "market manipulation detection AI",
 ]
 
 # Council roster (per CLAUDE.md §5)
@@ -148,6 +195,69 @@ def diff_docs() -> dict:
 
     save_cached_hashes(current)
     return {"changed": changed, "errors": errors, "total_fetched": len(current)}
+
+
+def _ddg_search(query: str, limit: int = 5) -> list[str]:
+    """Return up to `limit` result URLs from DuckDuckGo HTML search (no API key)."""
+    encoded = urllib.parse.urlencode({"q": query})
+    url = f"https://html.duckduckgo.com/html/?{encoded}"
+    html = fetch_url(url)
+    if not html:
+        return []
+    urls: list[str] = []
+    for href in re.findall(r'<a[^>]+class="result__a"[^>]+href="([^"]+)"', html):
+        if href.startswith("//duckduckgo.com/l/"):
+            m = re.search(r"[?&]uddg=([^&]+)", href)
+            if m:
+                href = urllib.parse.unquote(m.group(1))
+        if href.startswith("http"):
+            urls.append(href)
+        if len(urls) >= limit:
+            break
+    return urls
+
+
+def search_pass() -> dict:
+    """Run SEARCH_QUERIES via DuckDuckGo, fetch unseen URLs, return findings dict."""
+    cache_file = MEMORY / "nightly_search_hashes.json"
+    try:
+        seen: dict[str, str] = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
+    except Exception:  # noqa: BLE001
+        seen = {}
+
+    updated_seen: dict[str, str] = dict(seen)
+    found: dict[str, dict] = {}
+    errors: list[str] = []
+    new_urls = 0
+
+    for query in SEARCH_QUERIES:
+        for url in _ddg_search(query, limit=5):
+            url_key = content_hash(url)
+            if url_key in seen:
+                continue
+            new_urls += 1
+            content = fetch_url(url)
+            if content is None:
+                errors.append(url)
+                updated_seen[url_key] = "error"
+                continue
+            h = content_hash(content)
+            updated_seen[url_key] = h
+            found[url] = {
+                "query": query,
+                "hash": h,
+                "previous_hash": None,
+                "change_kind": "new",
+                "content_sample": content[:500],
+            }
+
+    try:
+        cache_file.write_text(json.dumps(updated_seen, indent=2), encoding="utf-8")
+    except Exception:  # noqa: BLE001
+        pass
+
+    return {"found": found, "errors": errors, "new_urls": new_urls,
+            "total_queries": len(SEARCH_QUERIES)}
 
 
 def generate_proposal(changed: dict, date_str: str) -> Path:
@@ -274,6 +384,13 @@ def main() -> int:
     if errors:
         print(f"[nightly] errors fetching: {len(errors)} (URLs unreachable)")
     print(f"[nightly] changes detected: {len(changed)}")
+
+    # Step 1b — search pass
+    sr = search_pass()
+    print(f"[nightly] search pass: {sr['total_queries']} queries, "
+          f"{sr['new_urls']} new URLs, {len(sr['found'])} fetched")
+    changed.update(sr["found"])
+    errors.extend(sr["errors"])
 
     if args.dry_run:
         print("[nightly] --dry-run: not writing proposal or logs")

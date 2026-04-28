@@ -141,7 +141,11 @@
       "Bash(rm -f .claude/tools/_v57_correction.py)",
       "Bash(py -3 .claude/tools/nightly_improvement.py)",
       "Bash(py -3 .claude/tools/graphify_update.py)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)",
+      "mcp__scheduled-tasks__update_scheduled_task"
     ]
   }
 }
