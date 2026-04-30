@@ -1,0 +1,33 @@
+{
+  "run_date": "2026-04-30",
+  "timestamp": "2026-04-30T18:38:45.169310+00:00",
+  "docs_fetched": {
+    "attempted": 32,
+    "succeeded": 7,
+    "changed": 6,
+    "errors": "MCP ecosystem SSL errors; release-notes 404"
+  },
+  "searches_run": 12,
+  "searches_total": 34,
+  "official_docs_fetched": [
+    "overview",
+    "hooks",
+    "settings",
+    "memory",
+    "sub-agents",
+    "agent-sdk/overview",
+    "research/building-effective-agents"
+  ],
+  "key_signals": {
+    "HOOKS": "20+ lifecycle events; 5 handler types (command/http/mcp_tool/prompt/agent); hookSpecificOutput.updatedInput+additionalContext; permissionDecision=defer",
+    "SETTINGS": "effortLevel xhigh; sandbox block; worktree config; claudeMdExcludes; channelsEnabled; disableAllHooks",
+    "MEMORY": "CLAUDE.md 200-line limit; auto memory MEMORY.md 200lines/25KB; InstructionsLoaded hook; HTML comments stripped",
+    "AGENTS": "scope priority; new frontmatter: background/isolation/effort/skills/initialPrompt/memory(user/project/none)",
+    "AGENT_SDK": "renamed to Claude Agent SDK; AskUserQuestion; resume; Opus 4.7 needs v0.2.111+",
+    "MCP": "spec 2025-11-25; stateless HTTP transport; Tasks primitive; 200+ servers; enterprise SSO auth",
+    "SECURITY": "OWASP LLM #1 prompt injection; MCP tool poisoning; PALADIN 5-layer defense",
+    "COMPLIANCE": "proactive surveillance AI; traceable/auditable decisions; 20x faster alert resolution",
+    "SKILLS": "Capability Uplift vs Encoded Preference; 100 tokens/scan; progressive disclosure",
+    "WORKFLOW": "Agent SDK rename; Desktop app; Web; Routines; Remote Control; Channels; Slack; GitLab CI/CD"
+  }
+}

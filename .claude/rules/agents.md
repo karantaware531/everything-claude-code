@@ -18,11 +18,17 @@ When editing any file under `.claude/agents/**/*.md`:
 - `disallowedTools` — explicit denylist (e.g., `Write, Edit` on governance agents)
 - `model` — `haiku | sonnet | opus` (cost optimization)
 - `permissionMode` — `default | acceptEdits | plan | dontAsk`
-- `memory` — `user | project | local` (enables persistent cross-session memory)
+- `memory` — `user | project | none` (persistent cross-session memory scope)
+  - `memory: user` → stores in `~/.claude/agent-memory/` (all projects)
+  - `memory: project` → stores in project root memory dir (repo-scoped)
+  - `memory: none` → no persistent memory (default for most agents)
 - `maxTurns` — integer cap on agent self-chat (prevents runaway)
 - `color` — UI distinguisher in task lists
-- `isolation` — `worktree` for risky parallel edits
-- `effort` — `high | max` for extended-thinking agents
+- `isolation` — `worktree` for risky parallel edits (git worktree per invocation)
+- `effort` — `low | medium | high | xhigh` effort level (Opus 4.7 only for xhigh)
+- `background` — `true` to run without blocking orchestrator (async dispatch)
+- `skills` — list of skill names to inject at subagent startup (e.g., `[lead-agent]`)
+- `initialPrompt` — string injected as first context before task (domain bootstrapping)
 
 ## Governance agents (critic, evaluator, security, reflection, knowledge_validator)
 - MUST have `tools: Read, Grep, Glob` (read-only)

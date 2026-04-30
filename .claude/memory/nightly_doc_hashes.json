@@ -1,12 +1,16 @@
 {
-  "https://code.claude.com/docs/en/overview": "3108deddf302",
+  "https://code.claude.com/docs/en/overview": "4cf692e77f7f",
   "https://code.claude.com/docs/en/features-overview": "a27f82fd5c44",
   "https://code.claude.com/docs/en/claude-directory": "9b17addc59b3",
   "https://code.claude.com/docs/en/context-window": "8f4ab6eca99e",
-  "https://code.claude.com/docs/en/memory": "c2dc31653c2a",
+  "https://code.claude.com/docs/en/memory": "4d0467391702",
   "https://code.claude.com/docs/en/permission-modes": "de72c0a8fff2",
   "https://code.claude.com/docs/en/best-practices": "526765f58595",
-  "https://code.claude.com/docs/en/sub-agents": "06241aadc9e3",
+  "https://code.claude.com/docs/en/sub-agents": "860940e7b289",
   "https://code.claude.com/docs/en/agent-teams": "3487530a8178",
-  "https://code.claude.com/docs/en/hooks-guide": "af421b13f860"
+  "https://code.claude.com/docs/en/hooks-guide": "af421b13f860",
+  "https://code.claude.com/docs/en/hooks": "2d5175626eab",
+  "https://code.claude.com/docs/en/settings": "ba6f31b7b7cc",
+  "https://code.claude.com/docs/en/agent-sdk/overview": "0fa3882e2652",
+  "https://docs.anthropic.com/en/research/building-effective-agents": "c33a42029f25"
 }

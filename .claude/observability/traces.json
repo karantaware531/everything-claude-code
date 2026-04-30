@@ -432,5 +432,135 @@
       ]
     },
     "protocol_version": "1.0"
+  },
+  {
+    "trace_id": "nightly-2026-04-30-critic",
+    "task_id": "nightly-2026-04-30",
+    "timestamp": "2026-04-30T18:37:09.308236+00:00",
+    "event": "council_notification",
+    "to_agent": "critic",
+    "from_agent": "nightly_improvement_runner",
+    "payload": {
+      "proposal": ".claude/notes/concepts/proposals/nightly-2026-04-30.md",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "pending_review": [
+        "NI-004 through NI-020 \u2014 see proposal for details"
+      ],
+      "message": "critic: please review nightly-2026-04-30 proposal. Auto-applied NI-001 to NI-003 (hooks.md expansion) and NI-008/NI-009 (agents.md frontmatter). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution. Veto if any applied change is unsafe."
+    }
+  },
+  {
+    "trace_id": "nightly-2026-04-30-evaluator",
+    "task_id": "nightly-2026-04-30",
+    "timestamp": "2026-04-30T18:37:09.308236+00:00",
+    "event": "council_notification",
+    "to_agent": "evaluator",
+    "from_agent": "nightly_improvement_runner",
+    "payload": {
+      "proposal": ".claude/notes/concepts/proposals/nightly-2026-04-30.md",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "pending_review": [
+        "NI-004 through NI-020 \u2014 see proposal for details"
+      ],
+      "message": "evaluator: please review nightly-2026-04-30 proposal. Auto-applied NI-001 to NI-003 (hooks.md expansion) and NI-008/NI-009 (agents.md frontmatter). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution. Veto if any applied change is unsafe."
+    }
+  },
+  {
+    "trace_id": "nightly-2026-04-30-security",
+    "task_id": "nightly-2026-04-30",
+    "timestamp": "2026-04-30T18:37:09.308236+00:00",
+    "event": "council_notification",
+    "to_agent": "security",
+    "from_agent": "nightly_improvement_runner",
+    "payload": {
+      "proposal": ".claude/notes/concepts/proposals/nightly-2026-04-30.md",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "pending_review": [
+        "NI-004 through NI-020 \u2014 see proposal for details"
+      ],
+      "message": "security: please review nightly-2026-04-30 proposal. Auto-applied NI-001 to NI-003 (hooks.md expansion) and NI-008/NI-009 (agents.md frontmatter). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution. Veto if any applied change is unsafe."
+    }
+  },
+  {
+    "trace_id": "nightly-2026-04-30-reflection",
+    "task_id": "nightly-2026-04-30",
+    "timestamp": "2026-04-30T18:37:09.308236+00:00",
+    "event": "council_notification",
+    "to_agent": "reflection",
+    "from_agent": "nightly_improvement_runner",
+    "payload": {
+      "proposal": ".claude/notes/concepts/proposals/nightly-2026-04-30.md",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "pending_review": [
+        "NI-004 through NI-020 \u2014 see proposal for details"
+      ],
+      "message": "reflection: please review nightly-2026-04-30 proposal. Auto-applied NI-001 to NI-003 (hooks.md expansion) and NI-008/NI-009 (agents.md frontmatter). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution. Veto if any applied change is unsafe."
+    }
+  },
+  {
+    "trace_id": "nightly-2026-04-30-knowledge_validator",
+    "task_id": "nightly-2026-04-30",
+    "timestamp": "2026-04-30T18:37:09.308236+00:00",
+    "event": "council_notification",
+    "to_agent": "knowledge_validator",
+    "from_agent": "nightly_improvement_runner",
+    "payload": {
+      "proposal": ".claude/notes/concepts/proposals/nightly-2026-04-30.md",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "pending_review": [
+        "NI-004 through NI-020 \u2014 see proposal for details"
+      ],
+      "message": "knowledge_validator: please review nightly-2026-04-30 proposal. Auto-applied NI-001 to NI-003 (hooks.md expansion) and NI-008/NI-009 (agents.md frontmatter). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution. Veto if any applied change is unsafe."
+    }
   }
 ]

@@ -1107,6 +1107,97 @@
       "source": "local_settings",
       "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
       "change_kind": "unknown"
+    },
+    {
+      "task_id": "config-change-audit",
+      "timestamp": "2026-04-28T16:31:25.610442+00:00",
+      "outcome": "config_change",
+      "source": "local_settings",
+      "file_path": "C:\\Users\\ktaware\\OneDrive - Nice Systems Ltd\\R&D\\Agentic-AI\\.claude\\settings.local.json",
+      "change_kind": "unknown"
+    },
+    {
+      "task_id": "nightly-2026-04-30",
+      "timestamp": "2026-04-30T18:36:53.777303+00:00",
+      "type": "nightly_auto_apply",
+      "outcome": "success",
+      "run_id": "nightly-2026-04-30",
+      "items_applied": [
+        "NI-001",
+        "NI-002",
+        "NI-003",
+        "NI-008",
+        "NI-009"
+      ],
+      "files_modified": [
+        ".claude/rules/hooks.md",
+        ".claude/rules/agents.md"
+      ],
+      "sources_credited": [
+        "https://code.claude.com/docs/en/hooks",
+        "https://code.claude.com/docs/en/sub-agents",
+        "https://code.claude.com/docs/en/settings",
+        "https://code.claude.com/docs/en/memory"
+      ],
+      "pending_council": [
+        "NI-004",
+        "NI-005",
+        "NI-006",
+        "NI-007",
+        "NI-010",
+        "NI-011",
+        "NI-012",
+        "NI-013",
+        "NI-014",
+        "NI-015",
+        "NI-016",
+        "NI-017",
+        "NI-018",
+        "NI-019",
+        "NI-020"
+      ],
+      "tier": 2,
+      "notes": "Nightly improvement run: 7 official docs fetched (out of 32; MCP SSL errors), 12 of 34 searches run. Applied hooks.md (new lifecycle events + handler types) and agents.md (new frontmatter fields). CLAUDE.md patches queued as PENDING_COUNCIL_DECISION per constitution rule."
+    },
+    {
+      "task_id": "nightly-2026-04-30-self-improvement",
+      "timestamp": "2026-04-30T18:41:02.764361+00:00",
+      "type": "claude_md_self_improvement",
+      "outcome": "PENDING_COUNCIL_DECISION",
+      "status": "blocked_by_tier4_requirement",
+      "proposed_patches": [
+        {
+          "id": "CMS-001",
+          "section": "\u00a73 Core Rules Rule 5",
+          "issue": "Graphify CLI command is incorrect. py -3 -m graphify .claude/notes/ --update fails. Correct: py -3 -m graphify update .",
+          "current": "After any .claude/notes/ write, trigger py -3 -m graphify .claude/notes/ --update",
+          "proposed": "After any .claude/notes/ write, trigger py -3 -m graphify update . (from project root)",
+          "tier": 1,
+          "impact": "H",
+          "source": "Observed CLI failure during nightly run 2026-04-30"
+        },
+        {
+          "id": "CMS-002",
+          "section": "\u00a710 Agent Spec canonical frontmatter",
+          "issue": "memory field shows project|user|local but local is not a valid value. Correct values are project|user|none",
+          "current": "memory: project | user | local",
+          "proposed": "memory: project | user | none (project=repo-scoped; user=all projects in ~/.claude/agent-memory/; none=no persistence)",
+          "tier": 1,
+          "impact": "M",
+          "source": "https://code.claude.com/docs/en/sub-agents"
+        },
+        {
+          "id": "CMS-003",
+          "section": "\u00a711 Hook Stack",
+          "issue": "Hook count is stale. 13 scripts/12 lifecycle events is outdated. Docs show 20+ lifecycle events. The rules/hooks.md was updated with NI-001/002/003 in this run.",
+          "current": "## 11. Hook Stack (13 scripts, 12 lifecycle events)",
+          "proposed": "## 11. Hook Stack (13 scripts, 20+ lifecycle events documented in .claude/rules/hooks.md)",
+          "tier": 1,
+          "impact": "L",
+          "source": "https://code.claude.com/docs/en/hooks"
+        }
+      ],
+      "notes": "Constitution modification requires tier-4 user approval per \u00a712 Amendments. All 3 patches are Tier 1 (docs-only corrections). Recommend user apply CMS-001 immediately (fixes broken command), then CMS-002+CMS-003 in next session."
     }
   ]
 }
