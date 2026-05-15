@@ -1,4 +1,4 @@
-# Graph Report - Agentic-AI  (2026-05-01)
+# Graph Report - Agentic-AI  (2026-05-06)
 
 ## Corpus Check
 - 3 files · ~13,866 words
@@ -37,14 +37,14 @@
 ## Surprising Connections (you probably didn't know these)
 - `Benchmark: sliding-window-rate-limiter — single-threaded throughput.` --uses--> `RateLimiter`  [INFERRED]
   case-study\sliding-window-rate-limiter\bench.py → case-study\sliding-window-rate-limiter\rate_limiter.py
-- `pytest suite for rate_limiter.RateLimiter (sliding-window-counter algorithm).` --uses--> `RateLimiter`  [INFERRED]
-  case-study\sliding-window-rate-limiter\test_rate_limiter.py → case-study\sliding-window-rate-limiter\rate_limiter.py
-- `Sleep until the elapsed fraction within the NEXT window slot is approximately` --uses--> `RateLimiter`  [INFERRED]
-  case-study\sliding-window-rate-limiter\test_rate_limiter.py → case-study\sliding-window-rate-limiter\rate_limiter.py
-- `Call allow() n times and return the number of True results.` --uses--> `RateLimiter`  [INFERRED]
-  case-study\sliding-window-rate-limiter\test_rate_limiter.py → case-study\sliding-window-rate-limiter\rate_limiter.py
-- `limit=5, window=1s — burst of 5 must all pass; 6th must be denied.` --uses--> `RateLimiter`  [INFERRED]
-  case-study\sliding-window-rate-limiter\test_rate_limiter.py → case-study\sliding-window-rate-limiter\rate_limiter.py
+- `RateLimiter` --uses--> `pytest suite for rate_limiter.RateLimiter (sliding-window-counter algorithm).`  [INFERRED]
+  case-study\sliding-window-rate-limiter\rate_limiter.py → case-study\sliding-window-rate-limiter\test_rate_limiter.py
+- `RateLimiter` --uses--> `Sleep until the elapsed fraction within the NEXT window slot is approximately`  [INFERRED]
+  case-study\sliding-window-rate-limiter\rate_limiter.py → case-study\sliding-window-rate-limiter\test_rate_limiter.py
+- `RateLimiter` --uses--> `Call allow() n times and return the number of True results.`  [INFERRED]
+  case-study\sliding-window-rate-limiter\rate_limiter.py → case-study\sliding-window-rate-limiter\test_rate_limiter.py
+- `RateLimiter` --uses--> `limit=5, window=1s — burst of 5 must all pass; 6th must be denied.`  [INFERRED]
+  case-study\sliding-window-rate-limiter\rate_limiter.py → case-study\sliding-window-rate-limiter\test_rate_limiter.py
 
 ## Communities
 

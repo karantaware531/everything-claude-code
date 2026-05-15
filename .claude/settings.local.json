@@ -146,7 +146,10 @@
       "Bash(git push *)",
       "Bash(gh pr *)",
       "mcp__scheduled-tasks__update_scheduled_task",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(gh auth *)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); print\\(f'Overall: {data.get\\(\\\\\"overall_score\\\\\", data.get\\(\\\\\"score\\\\\", \\\\\"N/A\\\\\"\\)\\)}/10 - {data.get\\(\\\\\"verdict\\\\\", \\\\\"?\\\\\"\\)}'\\);\")"
     ]
   }
 }

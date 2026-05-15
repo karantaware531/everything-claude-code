@@ -35,9 +35,9 @@
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\bench.py",
       "source_location": "L1",
-      "id": "bench_rationale_1",
       "community": 5,
-      "norm_label": "benchmark: sliding-window-rate-limiter \u2014 single-threaded throughput."
+      "norm_label": "benchmark: sliding-window-rate-limiter \u2014 single-threaded throughput.",
+      "id": "bench_rationale_1"
     },
     {
       "label": "rate_limiter.py",
@@ -179,126 +179,126 @@
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L1",
-      "id": "rate_limiter_rationale_1",
       "community": 3,
-      "norm_label": "sliding-window-counter rate limiter \u2014 production-grade, stdlib only.  algorith"
+      "norm_label": "sliding-window-counter rate limiter \u2014 production-grade, stdlib only.  algorith",
+      "id": "rate_limiter_rationale_1"
     },
     {
       "label": "Per-key mutable state: two window counters + a per-key lock.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L41",
-      "id": "rate_limiter_rationale_41",
       "community": 3,
-      "norm_label": "per-key mutable state: two window counters + a per-key lock."
+      "norm_label": "per-key mutable state: two window counters + a per-key lock.",
+      "id": "rate_limiter_rationale_41"
     },
     {
       "label": "Drop windows older than previous_window to bound memory.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L48",
-      "id": "rate_limiter_rationale_48",
       "community": 3,
-      "norm_label": "drop windows older than previous_window to bound memory."
+      "norm_label": "drop windows older than previous_window to bound memory.",
+      "id": "rate_limiter_rationale_48"
     },
     {
       "label": "Apply the weighted-counter algorithm and return allow/deny.          Args:",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L55",
-      "id": "rate_limiter_rationale_55",
       "community": 3,
-      "norm_label": "apply the weighted-counter algorithm and return allow/deny.          args:"
+      "norm_label": "apply the weighted-counter algorithm and return allow/deny.          args:",
+      "id": "rate_limiter_rationale_55"
     },
     {
       "label": "Return a point-in-time snapshot of rate counters.          Args:",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L81",
-      "id": "rate_limiter_rationale_81",
       "community": 3,
-      "norm_label": "return a point-in-time snapshot of rate counters.          args:"
+      "norm_label": "return a point-in-time snapshot of rate counters.          args:",
+      "id": "rate_limiter_rationale_81"
     },
     {
       "label": "Thread-safe, async-compatible sliding-window-counter rate limiter.      Each u",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L109",
-      "id": "rate_limiter_rationale_109",
       "community": 0,
-      "norm_label": "thread-safe, async-compatible sliding-window-counter rate limiter.      each u"
+      "norm_label": "thread-safe, async-compatible sliding-window-counter rate limiter.      each u",
+      "id": "rate_limiter_rationale_109"
     },
     {
       "label": "Evict all TTL-expired keys.  Caller MUST hold ``_global_lock``.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L182",
-      "id": "rate_limiter_rationale_182",
       "community": 3,
-      "norm_label": "evict all ttl-expired keys.  caller must hold ``_global_lock``."
+      "norm_label": "evict all ttl-expired keys.  caller must hold ``_global_lock``.",
+      "id": "rate_limiter_rationale_182"
     },
     {
       "label": "Evict the single least-recently-used key.  Caller MUST hold ``_global_lock``.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L192",
-      "id": "rate_limiter_rationale_192",
       "community": 3,
-      "norm_label": "evict the single least-recently-used key.  caller must hold ``_global_lock``."
+      "norm_label": "evict the single least-recently-used key.  caller must hold ``_global_lock``.",
+      "id": "rate_limiter_rationale_192"
     },
     {
       "label": "Return existing _KeyState for *key*, creating it if absent.          All dict",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L199",
-      "id": "rate_limiter_rationale_199",
       "community": 3,
-      "norm_label": "return existing _keystate for *key*, creating it if absent.          all dict"
+      "norm_label": "return existing _keystate for *key*, creating it if absent.          all dict",
+      "id": "rate_limiter_rationale_199"
     },
     {
       "label": "Decide whether a request from *key* is within the rate limit.          Args:",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L234",
-      "id": "rate_limiter_rationale_234",
       "community": 4,
-      "norm_label": "decide whether a request from *key* is within the rate limit.          args:"
+      "norm_label": "decide whether a request from *key* is within the rate limit.          args:",
+      "id": "rate_limiter_rationale_234"
     },
     {
       "label": "Async variant of :meth:`allow`; never blocks the event loop.          Uses :fu",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L253",
-      "id": "rate_limiter_rationale_253",
       "community": 0,
-      "norm_label": "async variant of :meth:`allow`; never blocks the event loop.          uses :fu"
+      "norm_label": "async variant of :meth:`allow`; never blocks the event loop.          uses :fu",
+      "id": "rate_limiter_rationale_253"
     },
     {
       "label": "Clear rate-limit counters for one key, or for all keys.          Args:",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L268",
-      "id": "rate_limiter_rationale_268",
       "community": 6,
-      "norm_label": "clear rate-limit counters for one key, or for all keys.          args:"
+      "norm_label": "clear rate-limit counters for one key, or for all keys.          args:",
+      "id": "rate_limiter_rationale_268"
     },
     {
       "label": "Return rate-limit statistics for *key*.          Args:             key: Ident",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L291",
-      "id": "rate_limiter_rationale_291",
       "community": 1,
-      "norm_label": "return rate-limit statistics for *key*.          args:             key: ident"
+      "norm_label": "return rate-limit statistics for *key*.          args:             key: ident",
+      "id": "rate_limiter_rationale_291"
     },
     {
       "label": "Return the number of distinct keys currently tracked.          This is an obse",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\rate_limiter.py",
       "source_location": "L303",
-      "id": "rate_limiter_rationale_303",
       "community": 0,
-      "norm_label": "return the number of distinct keys currently tracked.          this is an obse"
+      "norm_label": "return the number of distinct keys currently tracked.          this is an obse",
+      "id": "rate_limiter_rationale_303"
     },
     {
       "label": "test_rate_limiter.py",
@@ -782,216 +782,216 @@
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L1",
-      "id": "test_rate_limiter_rationale_1",
       "community": 2,
-      "norm_label": "pytest suite for rate_limiter.ratelimiter (sliding-window-counter algorithm)."
+      "norm_label": "pytest suite for rate_limiter.ratelimiter (sliding-window-counter algorithm).",
+      "id": "test_rate_limiter_rationale_1"
     },
     {
       "label": "Sleep until the elapsed fraction within the NEXT window slot is approximately",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L39",
-      "id": "test_rate_limiter_rationale_39",
       "community": 1,
-      "norm_label": "sleep until the elapsed fraction within the next window slot is approximately"
+      "norm_label": "sleep until the elapsed fraction within the next window slot is approximately",
+      "id": "test_rate_limiter_rationale_39"
     },
     {
       "label": "Call allow() n times and return the number of True results.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L65",
-      "id": "test_rate_limiter_rationale_65",
       "community": 2,
-      "norm_label": "call allow() n times and return the number of true results."
+      "norm_label": "call allow() n times and return the number of true results.",
+      "id": "test_rate_limiter_rationale_65"
     },
     {
       "label": "limit=5, window=1s \u2014 burst of 5 must all pass; 6th must be denied.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L74",
-      "id": "test_rate_limiter_rationale_74",
       "community": 4,
-      "norm_label": "limit=5, window=1s \u2014 burst of 5 must all pass; 6th must be denied."
+      "norm_label": "limit=5, window=1s \u2014 burst of 5 must all pass; 6th must be denied.",
+      "id": "test_rate_limiter_rationale_74"
     },
     {
       "label": "Different keys must have completely independent counters.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L117",
-      "id": "test_rate_limiter_rationale_117",
       "community": 0,
-      "norm_label": "different keys must have completely independent counters."
+      "norm_label": "different keys must have completely independent counters.",
+      "id": "test_rate_limiter_rationale_117"
     },
     {
       "label": "After one full window elapses, the counter should effectively reset.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L151",
-      "id": "test_rate_limiter_rationale_151",
       "community": 2,
-      "norm_label": "after one full window elapses, the counter should effectively reset."
+      "norm_label": "after one full window elapses, the counter should effectively reset.",
+      "id": "test_rate_limiter_rationale_151"
     },
     {
       "label": "Scenario:       limit=10, window=1s.       Fill 10 requests in the FIRST windo",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L176",
-      "id": "test_rate_limiter_rationale_176",
       "community": 4,
-      "norm_label": "scenario:       limit=10, window=1s.       fill 10 requests in the first windo"
+      "norm_label": "scenario:       limit=10, window=1s.       fill 10 requests in the first windo",
+      "id": "test_rate_limiter_rationale_176"
     },
     {
       "label": "Fill 10 in window N. Sleep until ~50% through window N+1.         expected esti",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L204",
-      "id": "test_rate_limiter_rationale_204",
       "community": 1,
-      "norm_label": "fill 10 in window n. sleep until ~50% through window n+1.         expected esti"
+      "norm_label": "fill 10 in window n. sleep until ~50% through window n+1.         expected esti",
+      "id": "test_rate_limiter_rationale_204"
     },
     {
       "label": "Fill 10 in window N.  Cross the boundary and land 50% into window N+1.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L231",
-      "id": "test_rate_limiter_rationale_231",
       "community": 4,
-      "norm_label": "fill 10 in window n.  cross the boundary and land 50% into window n+1."
+      "norm_label": "fill 10 in window n.  cross the boundary and land 50% into window n+1.",
+      "id": "test_rate_limiter_rationale_231"
     },
     {
       "label": "50 threads \u00d7 1000 calls each = 50,000 total allow() calls.     limit=100, windo",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L259",
-      "id": "test_rate_limiter_rationale_259",
       "community": 0,
-      "norm_label": "50 threads \u00d7 1000 calls each = 50,000 total allow() calls.     limit=100, windo"
+      "norm_label": "50 threads \u00d7 1000 calls each = 50,000 total allow() calls.     limit=100, windo",
+      "id": "test_rate_limiter_rationale_259"
     },
     {
       "label": "stats() must return a coherent dict after heavy concurrent writes.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L303",
-      "id": "test_rate_limiter_rationale_303",
       "community": 0,
-      "norm_label": "stats() must return a coherent dict after heavy concurrent writes."
+      "norm_label": "stats() must return a coherent dict after heavy concurrent writes.",
+      "id": "test_rate_limiter_rationale_303"
     },
     {
       "label": "Two independent keys hammered concurrently must each respect their         own",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L325",
-      "id": "test_rate_limiter_rationale_325",
       "community": 0,
-      "norm_label": "two independent keys hammered concurrently must each respect their         own"
+      "norm_label": "two independent keys hammered concurrently must each respect their         own",
+      "id": "test_rate_limiter_rationale_325"
     },
     {
       "label": "allow_async must obey the same limit/deny semantics as allow().",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L356",
-      "id": "test_rate_limiter_rationale_356",
       "community": 5,
-      "norm_label": "allow_async must obey the same limit/deny semantics as allow()."
+      "norm_label": "allow_async must obey the same limit/deny semantics as allow().",
+      "id": "test_rate_limiter_rationale_356"
     },
     {
       "label": "Mixing allow() and allow_async() on the same key must stay atomic.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L372",
-      "id": "test_rate_limiter_rationale_372",
       "community": 5,
-      "norm_label": "mixing allow() and allow_async() on the same key must stay atomic."
+      "norm_label": "mixing allow() and allow_async() on the same key must stay atomic.",
+      "id": "test_rate_limiter_rationale_372"
     },
     {
       "label": "Scheduling 100 concurrent allow_async() coroutines on limit=1000 must     compl",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L402",
-      "id": "test_rate_limiter_rationale_402",
       "community": 5,
-      "norm_label": "scheduling 100 concurrent allow_async() coroutines on limit=1000 must     compl"
+      "norm_label": "scheduling 100 concurrent allow_async() coroutines on limit=1000 must     compl",
+      "id": "test_rate_limiter_rationale_402"
     },
     {
       "label": "Even with high contention (limit=1), all coroutines must resolve         quickl",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L424",
-      "id": "test_rate_limiter_rationale_424",
       "community": 5,
-      "norm_label": "even with high contention (limit=1), all coroutines must resolve         quickl"
+      "norm_label": "even with high contention (limit=1), all coroutines must resolve         quickl",
+      "id": "test_rate_limiter_rationale_424"
     },
     {
       "label": "10,000 rapid allow() calls from one thread on limit=100, window=1s.     Total a",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L447",
-      "id": "test_rate_limiter_rationale_447",
       "community": 2,
-      "norm_label": "10,000 rapid allow() calls from one thread on limit=100, window=1s.     total a"
+      "norm_label": "10,000 rapid allow() calls from one thread on limit=100, window=1s.     total a",
+      "id": "test_rate_limiter_rationale_447"
     },
     {
       "label": "Correct implementation must allow exactly the limit, not fewer.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L461",
-      "id": "test_rate_limiter_rationale_461",
       "community": 2,
-      "norm_label": "correct implementation must allow exactly the limit, not fewer."
+      "norm_label": "correct implementation must allow exactly the limit, not fewer.",
+      "id": "test_rate_limiter_rationale_461"
     },
     {
       "label": "After one full window elapses, the limit is effectively refreshed.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L469",
-      "id": "test_rate_limiter_rationale_469",
       "community": 2,
-      "norm_label": "after one full window elapses, the limit is effectively refreshed."
+      "norm_label": "after one full window elapses, the limit is effectively refreshed.",
+      "id": "test_rate_limiter_rationale_469"
     },
     {
       "label": "Each new window grants a fresh budget.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L481",
-      "id": "test_rate_limiter_rationale_481",
       "community": 2,
-      "norm_label": "each new window grants a fresh budget."
+      "norm_label": "each new window grants a fresh budget.",
+      "id": "test_rate_limiter_rationale_481"
     },
     {
       "label": "reset() must clear counters; behaviour after reset mirrors a fresh limiter.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L499",
-      "id": "test_rate_limiter_rationale_499",
       "community": 6,
-      "norm_label": "reset() must clear counters; behaviour after reset mirrors a fresh limiter."
+      "norm_label": "reset() must clear counters; behaviour after reset mirrors a fresh limiter.",
+      "id": "test_rate_limiter_rationale_499"
     },
     {
       "label": "stats() must return a correctly structured dict with consistent values.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L560",
-      "id": "test_rate_limiter_rationale_560",
       "community": 1,
-      "norm_label": "stats() must return a correctly structured dict with consistent values."
+      "norm_label": "stats() must return a correctly structured dict with consistent values.",
+      "id": "test_rate_limiter_rationale_560"
     },
     {
       "label": "At the very start of a window, previous_count should be 0, so         estimated",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L574",
-      "id": "test_rate_limiter_rationale_574",
       "community": 1,
-      "norm_label": "at the very start of a window, previous_count should be 0, so         estimated"
+      "norm_label": "at the very start of a window, previous_count should be 0, so         estimated",
+      "id": "test_rate_limiter_rationale_574"
     },
     {
       "label": "After a window rolls over, previous_count must reflect the old window.",
       "file_type": "rationale",
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L596",
-      "id": "test_rate_limiter_rationale_596",
       "community": 1,
-      "norm_label": "after a window rolls over, previous_count must reflect the old window."
+      "norm_label": "after a window rolls over, previous_count must reflect the old window.",
+      "id": "test_rate_limiter_rationale_596"
     },
     {
       "label": "README",
@@ -1098,8 +1098,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L367",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies",
-      "_tgt": "bench_run",
+      "_src": "bench_run",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies",
       "source": "bench_run",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies"
     },
@@ -1110,8 +1110,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L382",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
-      "_tgt": "bench_run",
+      "_src": "bench_run",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
       "source": "bench_run",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state"
     },
@@ -1122,8 +1122,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L393",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool",
-      "_tgt": "bench_run",
+      "_src": "bench_run",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool",
       "source": "bench_run",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool"
     },
@@ -1134,8 +1134,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L418",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s",
-      "_tgt": "bench_run",
+      "_src": "bench_run",
+      "_tgt": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s",
       "source": "bench_run",
       "target": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s"
     },
@@ -1146,8 +1146,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L439",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention",
-      "_tgt": "bench_run",
+      "_src": "bench_run",
+      "_tgt": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention",
       "source": "bench_run",
       "target": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention"
     },
@@ -1171,9 +1171,9 @@
       "weight": 0.8,
       "_src": "bench_rationale_1",
       "_tgt": "rate_limiter_ratelimiter",
+      "confidence_score": 0.5,
       "source": "bench_rationale_1",
-      "target": "rate_limiter_ratelimiter",
-      "confidence_score": 0.5
+      "target": "rate_limiter_ratelimiter"
     },
     {
       "relation": "contains",
@@ -1469,11 +1469,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testbasicallowdeny",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testbasicallowdeny",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testbasicallowdeny"
     },
     {
       "relation": "uses",
@@ -1481,11 +1481,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testperkeyisolation",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testperkeyisolation",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testperkeyisolation",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testperkeyisolation"
     },
     {
       "relation": "uses",
@@ -1493,11 +1493,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testwindowrollover",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testwindowrollover",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testwindowrollover",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testwindowrollover"
     },
     {
       "relation": "uses",
@@ -1505,11 +1505,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testweightedslidingwindowstats",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testweightedslidingwindowstats"
     },
     {
       "relation": "uses",
@@ -1517,11 +1517,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testconcurrency",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testconcurrency",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testconcurrency",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testconcurrency"
     },
     {
       "relation": "uses",
@@ -1529,11 +1529,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testallowasyncsemantics",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testallowasyncsemantics",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testallowasyncsemantics"
     },
     {
       "relation": "uses",
@@ -1541,11 +1541,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testallowasyncnonblocking",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncnonblocking",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testallowasyncnonblocking",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testallowasyncnonblocking"
     },
     {
       "relation": "uses",
@@ -1553,11 +1553,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testadversarialburst",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testadversarialburst",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testadversarialburst",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testadversarialburst"
     },
     {
       "relation": "uses",
@@ -1565,11 +1565,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_testreset",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_testreset",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_testreset"
     },
     {
       "relation": "uses",
@@ -1577,11 +1577,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_teststats",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_teststats",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_teststats"
     },
     {
       "relation": "uses",
@@ -1589,11 +1589,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_1",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_1",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_1",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_1"
     },
     {
       "relation": "uses",
@@ -1601,11 +1601,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_39",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_39",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_39",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_39"
     },
     {
       "relation": "uses",
@@ -1613,11 +1613,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_65",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_65",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_65",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_65"
     },
     {
       "relation": "uses",
@@ -1625,11 +1625,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_74",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_74",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_74",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_74"
     },
     {
       "relation": "uses",
@@ -1637,11 +1637,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_117",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_117",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_117",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_117"
     },
     {
       "relation": "uses",
@@ -1649,11 +1649,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_151",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_151",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_151",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_151"
     },
     {
       "relation": "uses",
@@ -1661,11 +1661,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_176",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_176",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_176",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_176"
     },
     {
       "relation": "uses",
@@ -1673,11 +1673,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_204",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_204",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_204",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_204"
     },
     {
       "relation": "uses",
@@ -1685,11 +1685,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_231",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_231",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_231",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_231"
     },
     {
       "relation": "uses",
@@ -1697,11 +1697,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_259",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_259",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_259",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_259"
     },
     {
       "relation": "uses",
@@ -1709,11 +1709,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_303",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_303",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_303",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_303"
     },
     {
       "relation": "uses",
@@ -1721,11 +1721,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_325",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_325",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_325",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_325"
     },
     {
       "relation": "uses",
@@ -1733,11 +1733,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_356",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_356",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_356",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_356"
     },
     {
       "relation": "uses",
@@ -1745,11 +1745,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_372",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_372",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_372",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_372"
     },
     {
       "relation": "uses",
@@ -1757,11 +1757,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_402",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_402",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_402",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_402"
     },
     {
       "relation": "uses",
@@ -1769,11 +1769,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_424",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_424",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_424",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_424"
     },
     {
       "relation": "uses",
@@ -1781,11 +1781,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_447",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_447",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_447",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_447"
     },
     {
       "relation": "uses",
@@ -1793,11 +1793,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_461",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_461",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_461",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_461"
     },
     {
       "relation": "uses",
@@ -1805,11 +1805,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_469",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_469",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_469",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_469"
     },
     {
       "relation": "uses",
@@ -1817,11 +1817,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_481",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_481",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_481",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_481"
     },
     {
       "relation": "uses",
@@ -1829,11 +1829,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_499",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_499",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_499",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_499"
     },
     {
       "relation": "uses",
@@ -1841,11 +1841,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_560",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_560",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_560",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_560"
     },
     {
       "relation": "uses",
@@ -1853,11 +1853,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_574",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_574",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_574",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_574"
     },
     {
       "relation": "uses",
@@ -1865,11 +1865,11 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L31",
       "weight": 0.8,
-      "_src": "test_rate_limiter_rationale_596",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_rationale_596",
+      "confidence_score": 0.5,
       "source": "rate_limiter_ratelimiter",
-      "target": "test_rate_limiter_rationale_596",
-      "confidence_score": 0.5
+      "target": "test_rate_limiter_rationale_596"
     },
     {
       "relation": "calls",
@@ -1878,8 +1878,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L77",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst"
     },
@@ -1890,8 +1890,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L83",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool"
     },
@@ -1902,8 +1902,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L88",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception"
     },
@@ -1914,8 +1914,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L94",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window"
     },
@@ -1926,8 +1926,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L101",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_invalid_limit_raises",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_invalid_limit_raises",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_invalid_limit_raises"
     },
@@ -1938,8 +1938,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L107",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_invalid_window_raises",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_invalid_window_raises",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testbasicallowdeny_test_invalid_window_raises"
     },
@@ -1950,8 +1950,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L120",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b"
     },
@@ -1962,8 +1962,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L130",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testperkeyisolation_test_many_keys_all_get_full_limit",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testperkeyisolation_test_many_keys_all_get_full_limit",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testperkeyisolation_test_many_keys_all_get_full_limit"
     },
@@ -1974,8 +1974,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L137",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters"
     },
@@ -1986,8 +1986,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L154",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires"
     },
@@ -1998,8 +1998,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L165",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testwindowrollover_test_full_quota_restored_after_two_windows",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testwindowrollover_test_full_quota_restored_after_two_windows",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testwindowrollover_test_full_quota_restored_after_two_windows"
     },
@@ -2010,8 +2010,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L186",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys"
     },
@@ -2022,8 +2022,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L194",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count"
     },
@@ -2034,8 +2034,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L212",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time"
     },
@@ -2046,8 +2046,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L239",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window"
     },
@@ -2058,8 +2058,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L275",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testconcurrency_test_total_allowed_within_limit_plus_tolerance",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testconcurrency_test_total_allowed_within_limit_plus_tolerance",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testconcurrency_test_total_allowed_within_limit_plus_tolerance"
     },
@@ -2070,8 +2070,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L304",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads"
     },
@@ -2082,8 +2082,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L329",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testconcurrency_test_per_key_isolation_under_concurrency",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testconcurrency_test_per_key_isolation_under_concurrency",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testconcurrency_test_per_key_isolation_under_concurrency"
     },
@@ -2094,8 +2094,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L359",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_allows_then_denies"
     },
@@ -2106,8 +2106,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L373",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state"
     },
@@ -2118,8 +2118,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L388",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_return_type_is_bool"
     },
@@ -2130,8 +2130,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L408",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testallowasyncnonblocking_test_100_concurrent_coroutines_finish_within_1s"
     },
@@ -2142,8 +2142,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L428",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testallowasyncnonblocking_test_event_loop_not_blocked_by_lock_contention"
     },
@@ -2154,8 +2154,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L454",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testadversarialburst_test_burst_total_allowed_does_not_exceed_limit",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testadversarialburst_test_burst_total_allowed_does_not_exceed_limit",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testadversarialburst_test_burst_total_allowed_does_not_exceed_limit"
     },
@@ -2166,8 +2166,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L462",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testadversarialburst_test_burst_allows_at_least_the_limit",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testadversarialburst_test_burst_allows_at_least_the_limit",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testadversarialburst_test_burst_allows_at_least_the_limit"
     },
@@ -2178,8 +2178,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L470",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep"
     },
@@ -2190,8 +2190,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L482",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testadversarialburst_test_repeated_bursts_across_multiple_windows",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testadversarialburst_test_repeated_bursts_across_multiple_windows",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testadversarialburst_test_repeated_bursts_across_multiple_windows"
     },
@@ -2202,8 +2202,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L502",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key"
     },
@@ -2214,8 +2214,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L511",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys"
     },
@@ -2226,8 +2226,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L523",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument"
     },
@@ -2238,8 +2238,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L537",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise"
     },
@@ -2250,8 +2250,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L542",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise"
     },
@@ -2262,8 +2262,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L546",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_testreset_test_stats_zeroed_after_reset"
     },
@@ -2274,8 +2274,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L563",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key"
     },
@@ -2286,8 +2286,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L568",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_current_count_increments_with_allows"
     },
@@ -2298,8 +2298,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L579",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window"
     },
@@ -2310,8 +2310,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L589",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros"
     },
@@ -2322,8 +2322,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L603",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance"
     },
@@ -2334,8 +2334,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L619",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_estimated_rate_type_is_float"
     },
@@ -2346,8 +2346,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L625",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
-      "_tgt": "rate_limiter_ratelimiter",
+      "_src": "rate_limiter_ratelimiter",
+      "_tgt": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
       "source": "rate_limiter_ratelimiter",
       "target": "test_rate_limiter_teststats_test_stats_values_are_non_negative"
     },
@@ -2454,8 +2454,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L66",
       "weight": 1.0,
-      "_src": "test_rate_limiter_count_allows",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_count_allows",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_count_allows"
     },
@@ -2466,8 +2466,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L78",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testbasicallowdeny_test_exactly_five_allowed_in_burst"
     },
@@ -2478,8 +2478,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L84",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testbasicallowdeny_test_return_types_are_bool"
     },
@@ -2490,8 +2490,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L90",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testbasicallowdeny_test_sixth_call_is_false_not_exception"
     },
@@ -2502,8 +2502,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L96",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testbasicallowdeny_test_all_subsequent_calls_denied_in_same_window"
     },
@@ -2514,8 +2514,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L121",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testperkeyisolation_test_key_a_exhausted_does_not_affect_key_b"
     },
@@ -2526,8 +2526,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L140",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testperkeyisolation_test_keys_do_not_share_counters"
     },
@@ -2538,8 +2538,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L156",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testwindowrollover_test_allows_after_window_expires"
     },
@@ -2550,8 +2550,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L187",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys"
     },
@@ -2562,8 +2562,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L196",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count"
     },
@@ -2574,8 +2574,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L214",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time"
     },
@@ -2586,8 +2586,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L241",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_allows_remaining_after_half_window"
     },
@@ -2598,8 +2598,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L376",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testallowasyncsemantics_test_async_and_sync_share_state"
     },
@@ -2610,8 +2610,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L472",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testadversarialburst_test_recovery_after_full_window_sleep"
     },
@@ -2622,8 +2622,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L503",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key"
     },
@@ -2634,8 +2634,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L512",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys"
     },
@@ -2646,8 +2646,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L526",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument"
     },
@@ -2658,8 +2658,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L548",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_testreset_test_stats_zeroed_after_reset"
     },
@@ -2670,8 +2670,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L570",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_teststats_test_current_count_increments_with_allows"
     },
@@ -2682,8 +2682,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L581",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window"
     },
@@ -2694,8 +2694,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L605",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance"
     },
@@ -2706,8 +2706,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L620",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_teststats_test_estimated_rate_type_is_float"
     },
@@ -2718,8 +2718,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L627",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
-      "_tgt": "rate_limiter_ratelimiter_allow",
+      "_src": "rate_limiter_ratelimiter_allow",
+      "_tgt": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
       "source": "rate_limiter_ratelimiter_allow",
       "target": "test_rate_limiter_teststats_test_stats_values_are_non_negative"
     },
@@ -2754,8 +2754,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L507",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_reset_single_key_clears_that_key"
     },
@@ -2766,8 +2766,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L516",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_reset_single_key_does_not_affect_other_keys"
     },
@@ -2778,8 +2778,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L531",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_reset_all_keys_when_no_argument"
     },
@@ -2790,8 +2790,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L539",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_reset_nonexistent_key_does_not_raise"
     },
@@ -2802,8 +2802,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L543",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_reset_all_on_empty_limiter_does_not_raise"
     },
@@ -2814,8 +2814,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L549",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
-      "_tgt": "rate_limiter_ratelimiter_reset",
+      "_src": "rate_limiter_ratelimiter_reset",
+      "_tgt": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
       "source": "rate_limiter_ratelimiter_reset",
       "target": "test_rate_limiter_testreset_test_stats_zeroed_after_reset"
     },
@@ -2838,8 +2838,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L188",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_stats_dict_has_required_keys"
     },
@@ -2850,8 +2850,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L197",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_estimated_rate_reflects_current_window_count"
     },
@@ -2862,8 +2862,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L219",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_testweightedslidingwindowstats_test_previous_window_weight_decays_over_time"
     },
@@ -2874,8 +2874,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L316",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_testconcurrency_test_no_state_corruption_across_threads"
     },
@@ -2886,8 +2886,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L550",
       "weight": 1.0,
-      "_src": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_testreset_test_stats_zeroed_after_reset",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_testreset_test_stats_zeroed_after_reset"
     },
@@ -2898,8 +2898,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L564",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_stats_shape_on_fresh_key"
     },
@@ -2910,8 +2910,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L571",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_current_count_increments_with_allows",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_current_count_increments_with_allows"
     },
@@ -2922,8 +2922,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L582",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_estimated_rate_matches_current_count_in_fresh_window"
     },
@@ -2934,8 +2934,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L590",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_stats_for_unknown_key_returns_zeros"
     },
@@ -2946,8 +2946,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L612",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_previous_count_populated_after_window_advance"
     },
@@ -2958,8 +2958,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L621",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_estimated_rate_type_is_float",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_estimated_rate_type_is_float"
     },
@@ -2970,8 +2970,8 @@
       "source_file": "case-study\\sliding-window-rate-limiter\\test_rate_limiter.py",
       "source_location": "L628",
       "weight": 1.0,
-      "_src": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
-      "_tgt": "rate_limiter_ratelimiter_stats",
+      "_src": "rate_limiter_ratelimiter_stats",
+      "_tgt": "test_rate_limiter_teststats_test_stats_values_are_non_negative",
       "source": "rate_limiter_ratelimiter_stats",
       "target": "test_rate_limiter_teststats_test_stats_values_are_non_negative"
     },
